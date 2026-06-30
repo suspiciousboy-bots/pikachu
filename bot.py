@@ -161,11 +161,13 @@ async def run_userbot_commands(user_client, owner_id):
         print(f"  ⚡ Uꜱᴇʀʙᴏᴛ Sᴘᴀᴡɴᴇᴅ Sᴜᴄᴄᴇssғᴜʟʟʏ!")
         print(f"  👤 Aᴄᴄᴏᴜɴᴛ: {me.first_name} (ID: {my_id})")
         print(f"  👑 Bʏ: {OWNER_NAME}")
+        print(f"  📢 Uꜱᴇʀʙᴏᴛ ɪs ɴᴏᴡ ʟɪsᴛᴇɴɪɴɢ ғᴏʀ ᴄᴏᴍᴍᴀɴᴅs!")
         print("•" * 50 + "\n")
 
         # ────═◈═─ COMMAND: .clone ─═◈═────
         @user_client.on(events.NewMessage(outgoing=True, pattern=r"^\.clone(?: |$)"))
         async def clone_user(event):
+            print(f"  🔄 .clone command detected from user {my_id}")
             global USER_BACKUPS
             await event.delete()
             status_msg = await event.respond("🔄 *Pʀᴏᴄᴇssɪɴɢ ᴄʟᴏɴᴇ ʀᴇǫᴜᴇsᴛ...*")
@@ -238,11 +240,11 @@ async def run_userbot_commands(user_client, owner_id):
         # ────═◈═─ COMMAND: .reidentify ─═◈═────
         @user_client.on(events.NewMessage(outgoing=True, pattern=r"^\.reidentify$"))
         async def reidentify_user(event):
+            print(f"  🔄 .reidentify command detected from user {my_id}")
             global USER_BACKUPS
             await event.delete()
             status_msg = await event.respond("🔄 *Rᴇᴄᴏɴsɪᴅᴇʀɪɴɢ ɪᴅᴇɴᴛɪᴛʏ ʙᴀᴄᴋᴜᴘ ᴘᴀʀᴀᴍᴇᴛᴇʀs...*")
             
-            # Fetch latest data currently set on the profile to overwrite old cache
             try:
                 fresh_me = await user_client.get_me()
                 my_full = await user_client(GetFullUserRequest(my_id))
@@ -264,6 +266,7 @@ async def run_userbot_commands(user_client, owner_id):
         # ────═◈═─ COMMAND: .return ─═◈═────
         @user_client.on(events.NewMessage(outgoing=True, pattern=r"^\.return$"))
         async def restore_user(event):
+            print(f"  🔄 .return command detected from user {my_id}")
             global USER_BACKUPS
             if my_id not in USER_BACKUPS:
                 await event.delete()
@@ -295,6 +298,12 @@ async def run_userbot_commands(user_client, owner_id):
 
             await status_msg.delete()
             await event.respond("✅ *Iᴅᴇɴᴛɪᴛʏ sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇsᴛᴏʀᴇᴅ!*")
+
+        # ────═◈═─ COMMAND: .test (Debug) ─═◈═────
+        @user_client.on(events.NewMessage(outgoing=True, pattern=r"^\.test$"))
+        async def test_command(event):
+            await event.edit("✅ Uꜱᴇʀʙᴏᴛ ɪs ᴡᴏʀᴋɪɴɢ! .clone sʜᴏᴜʟᴅ ᴡᴏʀᴋ ɴᴏᴡ.")
+            print(f"  ✅ .test command received from user {my_id}")
 
         await user_client.run_until_disconnected()
     except Exception as e:
