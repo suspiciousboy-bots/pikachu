@@ -7,14 +7,17 @@ from telethon.tl.functions.account import UpdateProfileRequest
 from telethon.tl.functions.photos import UploadProfilePhotoRequest, DeletePhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import User
+from config import config
 
-# ────═◈═─ CONFIGURATION FROM ENVIRONMENT ─═◈═────
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "your_bot_token_here")
-API_ID = int(os.environ.get("API_ID", 6))
-API_HASH = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
-OWNER_NAME = os.environ.get("OWNER_NAME", "⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐")
-OWNER_ID = int(os.environ.get("OWNER_ID", 0))  # Your Telegram User ID
-SESSION_DIR = os.environ.get("SESSION_DIR", os.path.expanduser("~/.userbot_sessions"))
+# ────═◈═─ CONFIGURATION FROM CONFIG ─═◈═────
+BOT_TOKEN = config.BOT_TOKEN
+API_ID = config.API_ID
+API_HASH = config.API_HASH
+OWNER_NAME = config.OWNER_NAME
+OWNER_ID = config.OWNER_ID
+BOT_NAME = config.BOT_NAME
+BOT_USERNAME = config.BOT_USERNAME
+SESSION_DIR = config.SESSION_DIR
 # ──────────────────────────────────────────────────
 
 # Create session directory if it doesn't exist
@@ -34,7 +37,7 @@ bot = TelegramClient(bot_session_path, API_ID, API_HASH, timeout=30)
 # ────═◈═─ PIKACHU BOT MANAGER ─═◈═────
 print("╔══════════════════════════════════════════════╗")
 print("║      ⚡ PIKACHU BOT MANAGER ⚡              ║")
-print(f"║          Bʏ: ⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐           ║")
+print(f"║          Bʏ: {OWNER_NAME}           ║")
 print("╚══════════════════════════════════════════════╝")
 print("•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°")
 print("  🔌 Iɴɪᴛɪᴀʟɪᴢɪɴɢ ᴄᴏʀᴇ ᴇɴɢɪɴᴇ...")
@@ -51,7 +54,7 @@ async def start_bot(event):
     await event.respond(
         "╔══════════════════════════════════════╗\n"
         "║     ⚡ PIKACHU MULTI-USER DEPLOYER ⚡  ║\n"
-        f"║   Bʏ: ⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐            ║\n"
+        f"║   Bʏ: {OWNER_NAME}            ║\n"
         "╚══════════════════════════════════════╝\n\n"
         "✨ **Wᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ Pɪᴋᴀᴄʜᴜ Mᴜʟᴛɪ-Uꜱᴇʀ Dᴇᴘʟᴏʏᴇʀ!**\n\n"
         "📌 Oɴᴄᴇ ʟᴏɢɢᴇᴅ ɪɴ ʜᴇʀᴇ, ʏᴏᴜʀ sᴇssɪᴏɴ ɪs sᴀᴠᴇᴅ sᴀғᴇʟʏ.\n"
@@ -91,7 +94,7 @@ async def sequence_handler(event):
         
         try:
             session_name = f"active_{state['api_id']}_{state['api_hash']}_{user_id}.session"
-            user_session_path = os.path.join(SESSION_DIR, f"{session_name}?cache=shared")
+            user_session_path = os.path.join(SESSION_DIR, session_name)
             user_client = TelegramClient(user_session_path, state["api_id"], state["api_hash"])
             
             await user_client.connect()
@@ -328,7 +331,7 @@ async def auto_load_saved_sessions():
                 api_hash = parts[2]
                 owner_id = int(parts[3])
                 
-                saved_client = TelegramClient(f"{path}?cache=shared", api_id, api_hash)
+                saved_client = TelegramClient(path, api_id, api_hash)
                 await saved_client.connect()
                 
                 if await saved_client.is_user_authorized():
@@ -348,7 +351,7 @@ bot.loop.create_task(auto_load_saved_sessions())
 
 print("\n" + "═" * 50)
 print("  ⚡ PIKACHU ENGINE ONLINE!")
-print(f"  👑 Bʏ: ⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐")
+print(f"  👑 Bʏ: {OWNER_NAME}")
 print("  📌 Pᴇʀᴍᴀɴᴇɴᴛ ʀᴇsᴛᴏʀᴀᴛɪᴏɴ ᴀᴄᴛɪᴠᴇ")
 print("═" * 50 + "\n")
 
