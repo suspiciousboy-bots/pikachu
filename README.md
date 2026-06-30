@@ -1,7 +1,13 @@
-# 🙏 ACKNOWLEDGEMENT
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=2000&pause=1000&color=FF6B35&center=true&vCenter=true&width=900&height=70&lines=🙏+Jᴀʏ+Sʜʀᴇᴇ+Rᴀᴍ+🙏;🌸+Rᴀᴅʜᴇʏ+Rᴀᴅʜᴇʏ+🌸;🕉️+Hᴀʀᴇ+Kʀɪsʜɴᴀ+Hᴀʀᴇ+Rᴀᴍᴀ+🕉️;✨+Wᴇʟᴄᴏᴍᴇ+ᴛᴏ+Pɪᴋᴀᴄʜᴜ+Bᴏᴛ+✨">
+</p>
+
+---
+
+# 🙏 𝕬𝖈𝖐𝖓𝖔𝖜𝖑𝖊𝖉𝖌𝖊𝖒𝖊𝖓𝖙
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=FF6B35&center=true&vCenter=true&width=800&height=60&lines=🙏+Jᴀʏ+Sʜʀᴇᴇ+Rᴀᴍ+🙏;🌸+Rᴀᴅʜᴇʏ+Rᴀᴅʜᴇʏ+🌸">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=4000&pause=1500&color=FFD700&center=true&vCenter=true&width=800&height=50&lines=🌟+Gʀᴀᴛɪᴛᴜᴅᴇ+&+Bʟᴇssɪɴɢs+🌟;🙏+Jᴀʏ+Sʜʀᴇᴇ+Rᴀᴍ+🙏;🌸+Rᴀᴅʜᴇʏ+Rᴀᴅʜᴇʏ+🌸">
 </p>
 
 First and foremost, I bow down to **Lord Rama** and **Radha Rani** for their divine blessings and guidance throughout this journey. Their grace has been the foundation of this project.
@@ -16,7 +22,11 @@ This project stands on the shoulders of countless developers who have shared the
 
 ---
 
-# 📖 INTRODUCTION
+# 📖 𝕴𝖓𝖙𝖗𝖔𝖉𝖚𝖈𝖙𝖎𝖔𝖓
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=4000&pause=1500&color=FF6B35&center=true&vCenter=true&width=800&height=50&lines=⚡+Pɪᴋᴀᴄʜᴜ+Bᴏᴛ+•+Tʜᴇ+Uʟᴛɪᴍᴀᴛᴇ+Mᴀɴᴀɢᴇʀ+⚡;✨+Pᴏᴡᴇʀ+•+Sɪᴍᴘʟɪᴄɪᴛʏ+•+Rᴇʟɪᴀʙɪʟɪᴛʏ+✨">
+</p>
 
 <div align="center">
   <h1>⚡ PIⱤᗩᑕᕼᑌ ᗰᑌᒪTI-ᑌՏᗴᖇ ᗷOT ᗰᗩᑎᗩᘜᗴᖇ ⚡</h1>
@@ -59,6 +69,10 @@ This project stands on the shoulders of countless developers who have shared the
 
 ## 🎯 **Pʀᴏʟᴏɢᴜᴇ**
 
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=4000&pause=1500&color=FFD700&center=true&vCenter=true&width=900&height=50&lines=🔹+Sɪᴍᴘʟɪᴄɪᴛʏ+•+🔹+Pᴏᴡᴇʀ+•+🔹+Rᴇʟɪᴀʙɪʟɪᴛʏ+•+🔹+Sᴇᴄᴜʀɪᴛʏ">
+</p>
+
 Pikachu Bot is a powerful, multi-user Telegram userbot manager designed to give you complete control over your Telegram profile. Whether you want to clone someone's profile, backup your identity, or restore your original look, Pikachu Bot makes it effortless.
 
 **Why Pikachu Bot?**
@@ -69,7 +83,11 @@ Pikachu Bot is a powerful, multi-user Telegram userbot manager designed to give 
 
 ---
 
-# 🛠️ MAIN BODY
+# 🛠️ 𝕸𝖆𝖎𝖓 𝕭𝖔𝖉𝖞
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=4000&pause=1500&color=FF6B35&center=true&vCenter=true&width=800&height=50&lines=⚡+Cᴏʀᴇ+Fᴇᴀᴛᴜʀᴇs+•+Cᴏᴍᴍᴀɴᴅs+•+Dᴇᴘʟᴏʏᴍᴇɴᴛ+⚡;🛠️+Eᴠᴇʀʏᴛʜɪɴɢ+Yᴏᴜ+Nᴇᴇᴅ+🛠️">
+</p>
 
 ## ⚡ Fᴇᴀᴛᴜʀᴇs Oᴠᴇʀᴠɪᴇᴡ
 
@@ -85,5 +103,9 @@ Pikachu Bot is a powerful, multi-user Telegram userbot manager designed to give 
 ---
 
 ## 🚀 Qᴜɪᴄᴋ Sᴛᴀʀᴛ Gᴜɪᴅᴇ
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=FFD700&center=true&vCenter=true&width=700&height=45&lines=🚀+Sᴛᴀʀᴛ+ɪɴ+3+Eᴀsʏ+Sᴛᴇᴘs+🚀">
+</p>
 
 ### Step 1: Sᴛᴀʀᴛ ᴛʜᴇ Bᴏᴛ
