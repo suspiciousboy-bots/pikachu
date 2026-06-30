@@ -1,80 +1,116 @@
+
+### Eɴᴠɪʀᴏɴᴍᴇɴᴛ Vᴀʀɪᴀʙʟᴇs Rᴇǫᴜɪʀᴇᴅ
+
+| Vᴀʀɪᴀʙʟᴇ | Dᴇsᴄʀɪᴘᴛɪᴏɴ | Wʜᴇʀᴇ ᴛᴏ Gᴇᴛ |
+|----------|-------------|--------------|
+| `BOT_TOKEN` | Bᴏᴛ ᴛᴏᴋᴇɴ ғʀᴏᴍ @BotFather | @BotFather |
+| `API_ID` | Yᴏᴜʀ API ID | my.telegram.org |
+| `API_HASH` | Yᴏᴜʀ API Hᴀsʜ | my.telegram.org |
+| `OWNER_ID` | Yᴏᴜʀ Tᴇʟᴇɢʀᴀᴍ Uꜱᴇʀ ID | @userinfobot |
+| `OWNER_NAME` | Yᴏᴜʀ ᴅɪsᴘʟᴀʏ ɴᴀᴍᴇ | Cᴜsᴛᴏᴍ |
+| `BOT_NAME` | Bᴏᴛ ᴅɪsᴘʟᴀʏ ɴᴀᴍᴇ | Cᴜsᴛᴏᴍ |
+| `BOT_USERNAME` | Bᴏᴛ ᴜsᴇʀɴᴀᴍᴇ (ᴡɪᴛʜᴏᴜᴛ @) | @BotFather |
+
+---
+
+## 📊 **Bᴏᴛ Sᴛᴀᴛᴜs**
+
 <p align="center">
-  <img src="https://telegra.ph/file/8c0d4f2d8a9f8d3e6a7b8.gif" width="300" height="300" alt="Pikachu Bot">
+  <img src="https://img.shields.io/badge/🟢-Oɴʟɪɴᴇ-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/⚡-Aᴄᴛɪᴠᴇ-yellow?style=for-the-badge">
+  <img src="https://img.shields.io/badge/♾️-24/7-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/🛡️-Sᴇᴄᴜʀᴇ-brightgreen?style=for-the-badge">
+  <img src="https://img.shields.io/badge/👑-Cʀᴀᴢʏ%20Bᴏʏ-ff69b4?style=for-the-badge">
 </p>
 
-<h1 align="center">
-  ⚡ PIKACHU MULTI-USER BOT MANAGER ⚡
-</h1>
+---
+
+## 🎬 **Pʀᴇᴍɪᴜᴍ Aɴɪᴍᴀᴛɪᴏɴ & Dᴇsɪɢɴ**
+
+<div align="center">
+  <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" width="150">
+  <img src="https://media.giphy.com/media/26Ff5O5rK5PqDz5l6/giphy.gif" width="150">
+  <img src="https://media.giphy.com/media/3o6Zt3bZVcSQn5VzFq/giphy.gif" width="150">
+</div>
+
+---
+
+## 🛠️ **Tᴇᴄʜ Sᴛᴀᴄᴋ**
 
 <p align="center">
-  <strong>✨ The Most Advanced Telegram Userbot Manager ✨</strong>
+  <img src="https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Telethon-1.28.5-blue?style=for-the-badge&logo=telegram&logoColor=white">
+  <img src="https://img.shields.io/badge/Telegram-Bot-0088cc?style=for-the-badge&logo=telegram&logoColor=white">
 </p>
+
+---
+
+## 🙏 **Cʀᴇᴅɪᴛs & Aᴄᴋɴᴏᴡʟᴇᴅɢᴍᴇɴᴛs**
+
+| Cʀᴇᴅɪᴛ | Dᴇsᴄʀɪᴘᴛɪᴏɴ |
+|--------|-------------|
+| **👑 Oᴡɴᴇʀ** | ⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐ (@OfficialCrazyBoyX) |
+| **⚡ Bᴏᴛ** | Pɪᴋᴀᴄʜᴜ Mᴜʟᴛɪ-Uꜱᴇʀ Bᴏᴛ Mᴀɴᴀɢᴇʀ |
+| **📚 Lɪʙʀᴀʀʏ** | Tᴇʟᴇᴛʜᴏɴ - Pʏᴛʜᴏɴ Tᴇʟᴇɢʀᴀᴍ Cʟɪᴇɴᴛ |
+| **🌐 Hᴏsᴛɪɴɢ** | @elitedeployerbot / Rᴇɴᴅᴇʀ.ᴄᴏᴍ |
+
+---
+
+## 📜 **Lɪᴄᴇɴsᴇ**
+
+> Tʜɪs ᴘʀᴏᴊᴇᴄᴛ ɪs ғᴏʀ ᴇᴅᴜᴄᴀᴛɪᴏɴᴀʟ ᴘᴜʀᴘᴏsᴇs ᴏɴʟʏ. Uꜱᴇ ᴀᴛ ʏᴏᴜʀ ᴏᴡɴ ʀɪsᴋ.
+> Tʜᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ ɪs ɴᴏᴛ ʀᴇsᴘᴏɴsɪʙʟᴇ ғᴏʀ ᴀɴʏ ᴍɪsᴜsᴇ ᴏʀ ᴠɪᴏʟᴀᴛɪᴏɴs.
+
+---
+
+## 💫 **Sᴜᴘᴘᴏʀᴛ ᴛʜᴇ Pʀᴏᴊᴇᴄᴛ**
 
 <p align="center">
   <a href="https://t.me/Pikachuu_Robot">
-    <img src="https://img.shields.io/badge/🚀-Try%20Bot%20Now-blue?style=for-the-badge&logo=telegram&logoColor=white&color=0088cc">
+    <img src="https://img.shields.io/badge/🤖-Tʀʏ%20Tʜᴇ%20Bᴏᴛ-0088cc?style=for-the-badge&logo=telegram&logoColor=white">
   </a>
-  <a href="https://t.me/elitedeployerbot">
-    <img src="https://img.shields.io/badge/📦-Deploy%20Now-brightgreen?style=for-the-badge&logo=telegram&logoColor=white&color=00b894">
+  <a href="https://t.me/OfficialCrazyBoyX">
+    <img src="https://img.shields.io/badge/👑-Cᴏɴᴛᴀᴄᴛ%20Oᴡɴᴇʀ-ff69b4?style=for-the-badge&logo=telegram&logoColor=white">
   </a>
-  <a href="https://t.me/CRAZYBOYX">
-    <img src="https://img.shields.io/badge/👑-Contact%20Owner-red?style=for-the-badge&logo=telegram&logoColor=white&color=ff4757">
+  <a href="https://github.com/suspiciousboy-bots/pikachu">
+    <img src="https://img.shields.io/badge/⭐-Sᴛᴀʀ%20Tʜɪs%20Rᴇᴘᴏ-yellow?style=for-the-badge&logo=github&logoColor=white">
   </a>
 </p>
 
+---
+
+## 📍 **Dɪʀᴇᴄᴛ Lɪɴᴋs**
+
+| Aᴄᴛɪᴏɴ | Lɪɴᴋ |
+|--------|------|
+| **🤖 Tʀʏ Bᴏᴛ** | [@Pikachuu_Robot](https://t.me/Pikachuu_Robot) |
+| **👑 Cᴏɴᴛᴀᴄᴛ Oᴡɴᴇʀ** | [@OfficialCrazyBoyX](https://t.me/OfficialCrazyBoyX) |
+| **📦 Dᴇᴘʟᴏʏ Bᴏᴛ** | [@elitedeployerbot](https://t.me/elitedeployerbot) |
+| **⭐ GɪᴛHᴜʙ Rᴇᴘᴏ** | [suspiciousboy-bots/pikachu](https://github.com/suspiciousboy-bots/pikachu) |
+
+---
+
+<div align="center">
+  <a href="https://t.me/OfficialCrazyBoyX">
+    <img src="https://img.shields.io/badge/🔷-Cʟɪᴄᴋ%20Hᴇʀᴇ%20ᴛᴏ%20Cᴏɴᴛᴀᴄᴛ%20Oᴡɴᴇʀ%20Dɪʀᴇᴄᴛʟʏ-0088cc?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1A1A2E">
+  </a>
+</div>
+
+---
+
+<div align="center">
+  <h3>✨ Mᴀᴅᴇ ᴡɪᴛʜ ❤️ & ⚡ ʙʏ <a href="https://t.me/OfficialCrazyBoyX">⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐</a> ✨</h3>
+  <p><i>"Aɴᴅ ᴡʜᴏᴇᴠᴇʀ ᴅᴏᴇs ɢᴏᴏᴅ, ɪᴛ ɪs ғᴏʀ ʜɪs ᴏᴡɴ sᴏᴜʟ."</i></p>
+</div>
+
+---
+
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=pikachu&label=✨%20Bot%20Users&color=ff69b4&style=for-the-badge">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=3000&color=F7E300&center=true&vCenter=true&width=600&lines=🌙+Iɴ+ᴛʜᴇ+ɴᴀᴍᴇ+ᴏғ+Aʟʟᴀʜ,+ᴛʜᴇ+Mᴏsᴛ+Gʀᴀᴄɪᴏᴜs,+ᴛʜᴇ+Mᴏsᴛ+Mᴇʀᴄɪғᴜʟ;🤲+Mᴀʏ+Aʟʟᴀʜ+ʙʟᴇss+ᴇᴠᴇʀʏᴏɴᴇ+ᴡʜᴏ+ᴜsᴇs+ᴛʜɪs+ʙᴏᴛ;⚡+Cʟᴏɴᴇ+ᴡɪᴛʜ+Pᴏᴡᴇʀ+•+Rᴇᴛᴜʀɴ+ᴡɪᴛʜ+Gʀᴀᴄᴇ;🕊️+Pᴇᴀᴄᴇ+ʙᴇ+ᴜᴘᴏɴ+ʏᴏᴜ+ᴀʟʟ">
 </p>
 
 ---
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&pause=1000&color=F7E300&center=true&vCenter=true&width=435&lines=⚡+Clone+Any+Profile;📸+Save+Identity;🔄+Restore+Instantly;♾️+Unlimited+Auto-Reconnect">
+  <img src="https://profile-counter.glitch.me/suspiciousboy-bots/count.svg" alt="Vɪꜱɪᴛᴏʀ Cᴏᴜɴᴛ">
 </div>
-
----
-
-## 🕊️ "And We have certainly made the Quran easy to remember. So is there any who will remember?" — Surah Al-Qamar (54:17)
-
-<p align="center">
-  <img src="https://telegra.ph/file/9f8d3e6a7b8c0d4f2d8a9.gif" width="100%">
-</p>
-
----
-
-## 👑 **Owner: ⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐**
-
-<p align="center">
-  <a href="https://t.me/CRAZYBOYX">
-    <img src="https://img.shields.io/badge/📩-Contact%20Owner-ff69b4?style=for-the-badge&logo=telegram&logoColor=white">
-  </a>
-  <a href="https://t.me/CRAZYBOYX">
-    <img src="https://img.shields.io/badge/💬-Chat%20with%20Owner-20B2AA?style=for-the-badge&logo=telegram&logoColor=white">
-  </a>
-  <a href="https://t.me/CRAZYBOYX">
-    <img src="https://img.shields.io/badge/👤-Owner%20Profile-1E90FF?style=for-the-badge&logo=telegram&logoColor=white">
-  </a>
-</p>
-
----
-
-## 🌟 **Features**
-
-| Feature | Command | Description |
-|---------|---------|-------------|
-| ⚡ **Profile Cloning** | `.clone` | Clone any user's profile (name, bio, photo) |
-| 📸 **Identity Backup** | `.reidentify` | Save your current profile as backup |
-| 🔄 **Identity Restore** | `.return` | Restore your original profile instantly |
-| 👥 **Multi-User Support** | `/start` | Multiple users with separate sessions |
-| ♾️ **Auto-Reconnect** | 🔄 | Automatically reconnects if disconnected |
-| 🛡️ **24/7 Uptime** | ⏰ | Always online, always ready |
-
----
-
-## 🚀 **Quick Start**
-
-<div align="center">
-  <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" width="200">
-</div>
-
-### 1️⃣ Start the Bot
