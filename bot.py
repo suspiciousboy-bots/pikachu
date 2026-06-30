@@ -8,13 +8,16 @@ from telethon.tl.functions.photos import UploadProfilePhotoRequest, DeletePhotos
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import User
 
-# --- CONFIGURATION ---
-BOT_TOKEN = "token"  # Replace with your @BotFather token
-OWNER_NAME = "⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐"  # Bot owner name
-# ---------------------
+# ────═◈═─ CONFIGURATION FROM ENVIRONMENT ─═◈═────
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "your_bot_token_here")
+API_ID = int(os.environ.get("API_ID", 6))
+API_HASH = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
+OWNER_NAME = os.environ.get("OWNER_NAME", "⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐")
+OWNER_ID = int(os.environ.get("OWNER_ID", 0))  # Your Telegram User ID
+SESSION_DIR = os.environ.get("SESSION_DIR", os.path.expanduser("~/.userbot_sessions"))
+# ──────────────────────────────────────────────────
 
-# Safe permanent session storage directory in Termux
-SESSION_DIR = os.path.expanduser("~/.userbot_sessions")
+# Create session directory if it doesn't exist
 if not os.path.exists(SESSION_DIR):
     os.makedirs(SESSION_DIR)
 
@@ -26,12 +29,12 @@ USER_BACKUPS = {}
 
 # Initialize the main Bot Manager
 bot_session_path = os.path.join(SESSION_DIR, "bot_manager_session")
-bot = TelegramClient(bot_session_path, api_id=6, api_hash="eb06d4abfb49dc3eeb1aeb98ae0f581e", timeout=30)
+bot = TelegramClient(bot_session_path, API_ID, API_HASH, timeout=30)
 
 # ────═◈═─ PIKACHU BOT MANAGER ─═◈═────
 print("╔══════════════════════════════════════════════╗")
 print("║      ⚡ PIKACHU BOT MANAGER ⚡              ║")
-print("║          Bʏ: ⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐            ║")
+print(f"║          Bʏ: ⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐           ║")
 print("╚══════════════════════════════════════════════╝")
 print("•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°")
 print("  🔌 Iɴɪᴛɪᴀʟɪᴢɪɴɢ ᴄᴏʀᴇ ᴇɴɢɪɴᴇ...")
@@ -48,7 +51,7 @@ async def start_bot(event):
     await event.respond(
         "╔══════════════════════════════════════╗\n"
         "║     ⚡ PIKACHU MULTI-USER DEPLOYER ⚡  ║\n"
-        "║   Bʏ: ⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐            ║\n"
+        f"║   Bʏ: ⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐            ║\n"
         "╚══════════════════════════════════════╝\n\n"
         "✨ **Wᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ Pɪᴋᴀᴄʜᴜ Mᴜʟᴛɪ-Uꜱᴇʀ Dᴇᴘʟᴏʏᴇʀ!**\n\n"
         "📌 Oɴᴄᴇ ʟᴏɢɢᴇᴅ ɪɴ ʜᴇʀᴇ, ʏᴏᴜʀ sᴇssɪᴏɴ ɪs sᴀᴠᴇᴅ sᴀғᴇʟʏ.\n"
@@ -154,7 +157,7 @@ async def run_userbot_commands(user_client, owner_id):
         print("\n" + "•" * 50)
         print(f"  ⚡ Uꜱᴇʀʙᴏᴛ Sᴘᴀᴡɴᴇᴅ Sᴜᴄᴄᴇssғᴜʟʟʏ!")
         print(f"  👤 Aᴄᴄᴏᴜɴᴛ: {me.first_name} (ID: {my_id})")
-        print(f"  👑 Bʏ: ⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐")
+        print(f"  👑 Bʏ: {OWNER_NAME}")
         print("•" * 50 + "\n")
 
         # ────═◈═─ COMMAND: .clone ─═◈═────
