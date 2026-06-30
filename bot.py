@@ -29,7 +29,7 @@ if not os.path.exists(SESSION_DIR):
 # Tracks active live login states inside the Bot DM
 user_states = {}
 
-# Multi-user profile backup storage maps: { user_id: { first_name, last_name, about, has_photo } }
+# Multi-user profile backup storage maps: { user_id: { first_name, last_name, about, has_photo, photo_file } }
 USER_BACKUPS = {}
 
 # Initialize the main Bot Manager
@@ -213,33 +213,46 @@ async def run_userbot_commands(user_client, owner_id):
                 await event.respond("❌ *Tᴀʀɢᴇᴛ ᴍᴜsᴛ ʙᴇ ᴀ Uꜱᴇʀ ᴀᴄᴄᴏᴜɴᴛ.*")
                 return
 
-            # Save current profile as backup before cloning
+            # Save current profile as backup BEFORE cloning (including photo)
             try:
                 my_full = await user_client(GetFullUserRequest(my_id))
                 my_bio = my_full.full_user.about or ""
             except Exception:
                 my_bio = ""
 
+            # Download current profile photo if exists
+            photo_file = None
+            if me.photo:
+                try:
+                    photo_file = await user_client.download_profile_photo(my_id, file=f"backup_{my_id}.jpg")
+                    print(f"  📸 Current photo saved: {photo_file}")
+                except Exception as e:
+                    print(f"  ⚠️ Could not download current photo: {e}")
+
             USER_BACKUPS[my_id] = {
                 "first_name": me.first_name or "",
                 "last_name": me.last_name or "",
                 "about": my_bio,
-                "has_photo": bool(me.photo)
+                "has_photo": bool(me.photo),
+                "photo_file": photo_file  # Save the actual file path
             }
             print(f"  📦 Backup saved for user {my_id}")
 
+            # Now clone the target
             try:
                 target_full = await user_client(GetFullUserRequest(target_user.id))
                 target_bio = target_full.full_user.about or ""
             except Exception:
                 target_bio = ""
 
+            # Update name and bio
             await user_client(UpdateProfileRequest(
                 first_name=target_user.first_name or "",
                 last_name=target_user.last_name or "",
                 about=target_bio
             ))
 
+            # Clone profile picture
             if target_user.photo:
                 await status_msg.delete()
                 status_msg = await event.respond("🔄 *Cʟᴏɴɪɴɢ ᴘʀᴏғɪʟᴇ ᴘɪᴄᴛᴜʀᴇ...*")
@@ -270,11 +283,21 @@ async def run_userbot_commands(user_client, owner_id):
                 my_full = await user_client(GetFullUserRequest(my_id))
                 my_bio = my_full.full_user.about or ""
                 
+                # Download current profile photo if exists
+                photo_file = None
+                if fresh_me.photo:
+                    try:
+                        photo_file = await user_client.download_profile_photo(my_id, file=f"backup_{my_id}.jpg")
+                        print(f"  📸 Current photo saved: {photo_file}")
+                    except Exception as e:
+                        print(f"  ⚠️ Could not download current photo: {e}")
+                
                 USER_BACKUPS[my_id] = {
                     "first_name": fresh_me.first_name or "",
                     "last_name": fresh_me.last_name or "",
                     "about": my_bio,
-                    "has_photo": bool(fresh_me.photo)
+                    "has_photo": bool(fresh_me.photo),
+                    "photo_file": photo_file
                 }
                 
                 print(f"  ✅ .reidentify completed! Backup updated for user {my_id}")
@@ -300,22 +323,38 @@ async def run_userbot_commands(user_client, owner_id):
 
             status_msg = await event.respond("🔄 *Rᴇsᴛᴏʀɪɴɢ ʏᴏᴜʀ ᴏʀɪɢɪɴᴀʟ ɪᴅᴇɴᴛɪᴛʏ...*")
             backup = USER_BACKUPS[my_id]
-            print(f"  📋 Restoring backup for user {my_id}")
 
             try:
+                # Restore Name and Bio
                 await user_client(UpdateProfileRequest(
                     first_name=backup["first_name"],
                     last_name=backup["last_name"],
                     about=backup["about"]
                 ))
+                print(f"  ✅ Name and bio restored")
                 
-                if backup["has_photo"]:
+                # Restore Profile Picture (if it was backed up)
+                if backup.get("has_photo", False) and backup.get("photo_file"):
                     try:
+                        # Delete current photo(s)
                         async for photo in user_client.iter_profile_photos("me"):
                             await user_client(DeletePhotosRequest(id=[photo]))
-                            break 
+                            break
+                        
+                        # Upload and set saved photo
+                        if os.path.exists(backup["photo_file"]):
+                            file = await user_client.upload_file(backup["photo_file"])
+                            await user_client(UploadProfilePhotoRequest(file=file))
+                            print(f"  ✅ Profile picture restored")
+                            
+                            # Clean up the temporary file
+                            os.remove(backup["photo_file"])
+                        else:
+                            print(f"  ⚠️ Photo file not found: {backup['photo_file']}")
                     except Exception as e:
-                        print(f"  ⚠️ Could not delete photo: {e}")
+                        print(f"  ⚠️ Could not restore photo: {e}")
+                else:
+                    print(f"  ℹ️ No photo in backup, keeping current photo")
                 
                 print(f"  ✅ .return completed successfully for user {my_id}!")
                 await status_msg.delete()
@@ -329,7 +368,8 @@ async def run_userbot_commands(user_client, owner_id):
         @user_client.on(events.NewMessage(outgoing=True, pattern=r"^\.test$"))
         async def test_command(event):
             print(f"  ✅ .test command received from user {my_id}")
-            await event.edit(f"✅ Uꜱᴇʀʙᴏᴛ ɪs ᴡᴏʀᴋɪɴɢ!\n\n📦 Backup: {'✅ Yes' if my_id in USER_BACKUPS else '❌ No'}\n👤 User ID: {my_id}")
+            backup_status = "✅ Yes" if my_id in USER_BACKUPS else "❌ No"
+            await event.edit(f"✅ Uꜱᴇʀʙᴏᴛ ɪs ᴡᴏʀᴋɪɴɢ!\n\n📦 Backup: {backup_status}\n👤 User ID: {my_id}")
 
         await user_client.run_until_disconnected()
     except Exception as e:
