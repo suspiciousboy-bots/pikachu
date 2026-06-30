@@ -108,7 +108,6 @@ async def sequence_handler(event):
                     return
                 else:
                     await event.respond("❌ Sᴛʀɪɴɢ sᴇssɪᴏɴ ɪs ɴᴏᴛ ᴠᴀʟɪᴅ. Pʟᴇᴀsᴇ ʟᴏɢɪɴ ᴡɪᴛʜ ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ.")
-                    # Fall through to normal login
                     
             # Use file session (default)
             session_name = f"active_{state['api_id']}_{state['api_hash']}_{user_id}.session"
@@ -174,19 +173,20 @@ async def run_userbot_commands(user_client, owner_id):
         me = await user_client.get_me()
         my_id = me.id
         
-        # ────═◈═─ USERBOT SPAWNED ─═◈═────
         print("\n" + "•" * 50)
         print(f"  ⚡ Uꜱᴇʀʙᴏᴛ Sᴘᴀᴡɴᴇᴅ Sᴜᴄᴄᴇssғᴜʟʟʏ!")
         print(f"  👤 Aᴄᴄᴏᴜɴᴛ: {me.first_name} (ID: {my_id})")
         print(f"  👑 Bʏ: {OWNER_NAME}")
         print(f"  📢 Uꜱᴇʀʙᴏᴛ ɪs ɴᴏᴡ ʟɪsᴛᴇɴɪɴɢ ғᴏʀ ᴄᴏᴍᴍᴀɴᴅs!")
+        print(f"  📦 BACKUP STATUS: {'BACKUP EXISTS' if my_id in USER_BACKUPS else 'NO BACKUP'}")
         print("•" * 50 + "\n")
 
         # ────═◈═─ COMMAND: .clone ─═◈═────
         @user_client.on(events.NewMessage(outgoing=True, pattern=r"^\.clone(?: |$)"))
         async def clone_user(event):
-            print(f"  🔄 .clone command detected from user {my_id}")
+            print(f"  🔄 .clone command DETECTED from user {my_id}!")
             global USER_BACKUPS
+            
             await event.delete()
             status_msg = await event.respond("🔄 *Pʀᴏᴄᴇssɪɴɢ ᴄʟᴏɴᴇ ʀᴇǫᴜᴇsᴛ...*")
             
@@ -213,20 +213,20 @@ async def run_userbot_commands(user_client, owner_id):
                 await event.respond("❌ *Tᴀʀɢᴇᴛ ᴍᴜsᴛ ʙᴇ ᴀ Uꜱᴇʀ ᴀᴄᴄᴏᴜɴᴛ.*")
                 return
 
-            # If no backup exists yet, cache current look before updating fields
-            if my_id not in USER_BACKUPS:
-                try:
-                    my_full = await user_client(GetFullUserRequest(my_id))
-                    my_bio = my_full.full_user.about or ""
-                except Exception:
-                    my_bio = ""
+            # Save current profile as backup before cloning
+            try:
+                my_full = await user_client(GetFullUserRequest(my_id))
+                my_bio = my_full.full_user.about or ""
+            except Exception:
+                my_bio = ""
 
-                USER_BACKUPS[my_id] = {
-                    "first_name": me.first_name or "",
-                    "last_name": me.last_name or "",
-                    "about": my_bio,
-                    "has_photo": bool(me.photo)
-                }
+            USER_BACKUPS[my_id] = {
+                "first_name": me.first_name or "",
+                "last_name": me.last_name or "",
+                "about": my_bio,
+                "has_photo": bool(me.photo)
+            }
+            print(f"  📦 Backup saved for user {my_id}")
 
             try:
                 target_full = await user_client(GetFullUserRequest(target_user.id))
@@ -254,14 +254,16 @@ async def run_userbot_commands(user_client, owner_id):
             
             await status_msg.delete()
             await event.respond(f"👤 *Sᴜᴄᴄᴇssғᴜʟʟʏ ᴄʟᴏɴᴇᴅ* [{target_user.first_name}](tg://user?id={target_user.id})*!*")
+            print(f"  ✅ .clone completed for user {my_id}")
 
         # ────═◈═─ COMMAND: .reidentify ─═◈═────
         @user_client.on(events.NewMessage(outgoing=True, pattern=r"^\.reidentify$"))
         async def reidentify_user(event):
-            print(f"  🔄 .reidentify command detected from user {my_id}")
+            print(f"  🔄 .reidentify command DETECTED from user {my_id}!")
             global USER_BACKUPS
+            
             await event.delete()
-            status_msg = await event.respond("🔄 *Rᴇᴄᴏɴsɪᴅᴇʀɪɴɢ ɪᴅᴇɴᴛɪᴛʏ ʙᴀᴄᴋᴜᴘ ᴘᴀʀᴀᴍᴇᴛᴇʀs...*")
+            status_msg = await event.respond("🔄 *Rᴇᴄᴏɴsɪᴅᴇʀɪɴɢ ɪᴅᴇɴᴛɪᴛʏ ʙᴀᴄᴋᴜᴘ...*")
             
             try:
                 fresh_me = await user_client.get_me()
@@ -275,25 +277,30 @@ async def run_userbot_commands(user_client, owner_id):
                     "has_photo": bool(fresh_me.photo)
                 }
                 
+                print(f"  ✅ .reidentify completed! Backup updated for user {my_id}")
                 await status_msg.delete()
-                await event.respond("✅ *Yᴏᴜʀ ᴄᴜʀʀᴇɴᴛ ʟᴏᴏᴋ ʜᴀs ʙᴇᴇɴ sᴀᴠᴇᴅ ᴀs ᴛʜᴇ ɴᴇᴡ ʀᴇsᴛᴏʀᴀᴛɪᴏɴ ʟᴏᴏᴋ!*")
+                await event.respond("✅ *Yᴏᴜʀ ᴄᴜʀʀᴇɴᴛ ʟᴏᴏᴋ ʜᴀs ʙᴇᴇɴ sᴀᴠᴇᴅ ᴀs ʙᴀᴄᴋᴜᴘ!*")
             except Exception as e:
+                print(f"  ❌ .reidentify failed: {e}")
                 await status_msg.delete()
-                await event.respond(f"❌ *Fᴀɪʟᴇᴅ ᴛᴏ ʀᴇᴡʀɪᴛᴇ ʙᴀᴄᴋᴜᴘ ᴍᴇᴛʀɪᴄs:* {e}")
+                await event.respond(f"❌ *Fᴀɪʟᴇᴅ ᴛᴏ sᴀᴠᴇ ʙᴀᴄᴋᴜᴘ:* {e}")
 
         # ────═◈═─ COMMAND: .return ─═◈═────
         @user_client.on(events.NewMessage(outgoing=True, pattern=r"^\.return$"))
         async def restore_user(event):
-            print(f"  🔄 .return command detected from user {my_id}")
+            print(f"  🔄 .return command DETECTED from user {my_id}!")
             global USER_BACKUPS
+            
+            await event.delete()
+            
             if my_id not in USER_BACKUPS:
-                await event.delete()
+                print(f"  ❌ .return failed: No backup found for user {my_id}")
                 await event.respond("❌ *Nᴏ ʙᴀᴄᴋᴜᴘ ɪᴅᴇɴᴛɪᴛʏ ᴘʀᴏғɪʟᴇ ғᴏᴜɴᴅ.*")
                 return
 
-            await event.delete()
             status_msg = await event.respond("🔄 *Rᴇsᴛᴏʀɪɴɢ ʏᴏᴜʀ ᴏʀɪɢɪɴᴀʟ ɪᴅᴇɴᴛɪᴛʏ...*")
             backup = USER_BACKUPS[my_id]
+            print(f"  📋 Restoring backup for user {my_id}")
 
             try:
                 await user_client(UpdateProfileRequest(
@@ -301,27 +308,28 @@ async def run_userbot_commands(user_client, owner_id):
                     last_name=backup["last_name"],
                     about=backup["about"]
                 ))
-            except Exception as e:
+                
+                if backup["has_photo"]:
+                    try:
+                        async for photo in user_client.iter_profile_photos("me"):
+                            await user_client(DeletePhotosRequest(id=[photo]))
+                            break 
+                    except Exception as e:
+                        print(f"  ⚠️ Could not delete photo: {e}")
+                
+                print(f"  ✅ .return completed successfully for user {my_id}!")
                 await status_msg.delete()
-                await event.respond(f"⚠️ *Fᴀɪʟᴇᴅ ᴛᴏ ʀᴇsᴛᴏʀᴇ ᴛᴇxᴛ ᴘʀᴏғɪʟᴇ:* {e}")
-                return
+                await event.respond("✅ *Iᴅᴇɴᴛɪᴛʏ sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇsᴛᴏʀᴇᴅ!*")
+            except Exception as e:
+                print(f"  ❌ .return failed: {e}")
+                await status_msg.delete()
+                await event.respond(f"⚠️ *Fᴀɪʟᴇᴅ ᴛᴏ ʀᴇsᴛᴏʀᴇ ᴘʀᴏғɪʟᴇ:* {e}")
 
-            if backup["has_photo"]:
-                try:
-                    async for photo in user_client.iter_profile_photos("me"):
-                        await user_client(DeletePhotosRequest(id=[photo]))
-                        break 
-                except Exception:
-                    pass
-
-            await status_msg.delete()
-            await event.respond("✅ *Iᴅᴇɴᴛɪᴛʏ sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇsᴛᴏʀᴇᴅ!*")
-
-        # ────═◈═─ COMMAND: .test (Debug) ─═◈═────
+        # ────═◈═─ COMMAND: .test ─═◈═────
         @user_client.on(events.NewMessage(outgoing=True, pattern=r"^\.test$"))
         async def test_command(event):
-            await event.edit("✅ Uꜱᴇʀʙᴏᴛ ɪs ᴡᴏʀᴋɪɴɢ! .clone sʜᴏᴜʟᴅ ᴡᴏʀᴋ ɴᴏᴡ.")
             print(f"  ✅ .test command received from user {my_id}")
+            await event.edit(f"✅ Uꜱᴇʀʙᴏᴛ ɪs ᴡᴏʀᴋɪɴɢ!\n\n📦 Backup: {'✅ Yes' if my_id in USER_BACKUPS else '❌ No'}\n👤 User ID: {my_id}")
 
         await user_client.run_until_disconnected()
     except Exception as e:
