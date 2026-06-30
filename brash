@@ -1,7 +1,16 @@
-# Create a new repository on GitHub
-# Then push your code there
-git init
+# Clone your repo locally
+git clone https://github.com/suspiciousboy-bots/pikachu
+cd pikachu
+
+# Check bot.py - should have telethon imports
+head -20 bot.py
+
+# If using pyrogram, replace with telethon version
+# Update requirements.txt
+echo "telethon>=1.28.5" > requirements.txt
+echo "cryptg>=0.4.0" >> requirements.txt
+
+# Push changes
 git add .
-git commit -m "Initial commit - Pikachu Userbot"
-git remote add origin https://github.com/YOUR_USERNAME/pikachu-userbot.git
-git push -u origin main
+git commit -m "Fix: Use telethon instead of pyrogram"
+git push
