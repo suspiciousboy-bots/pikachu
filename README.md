@@ -1,130 +1,148 @@
-<!-- ========================= -->
-<!--     PREMIUM HEADINGS      -->
-<!-- ========================= -->
 
-<!-- 🙏 ACKNOWLEDGEMENT -->
+### Environment Variables Required
+
+| Vᴀʀɪᴀʙʟᴇ | Dᴇsᴄʀɪᴘᴛɪᴏɴ | Wʜᴇʀᴇ ᴛᴏ Gᴇᴛ |
+|----------|-------------|--------------|
+| `BOT_TOKEN` | Bᴏᴛ ᴛᴏᴋᴇɴ ғʀᴏᴍ @BotFather | @BotFather |
+| `API_ID` | Yᴏᴜʀ API ID | my.telegram.org |
+| `API_HASH` | Yᴏᴜʀ API Hᴀsʜ | my.telegram.org |
+| `OWNER_ID` | Yᴏᴜʀ Tᴇʟᴇɢʀᴀᴍ Uꜱᴇʀ ID | @userinfobot |
+| `OWNER_NAME` | Yᴏᴜʀ ᴅɪsᴘʟᴀʏ ɴᴀᴍᴇ | Cᴜsᴛᴏᴍ |
+| `BOT_NAME` | Bᴏᴛ ᴅɪsᴘʟᴀʏ ɴᴀᴍᴇ | Cᴜsᴛᴏᴍ |
+| `BOT_USERNAME` | Bᴏᴛ ᴜsᴇʀɴᴀᴍᴇ (ᴡɪᴛʜᴏᴜᴛ @) | @BotFather |
+
+---
+
+## 📊 Bᴏᴛ Sᴛᴀᴛᴜs
+
 <p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=FFD700&center=true&vCenter=true&width=900&height=60&lines=🙏+𝕬𝖈𝖐𝖓𝖔𝖜𝖑𝖊𝖉𝖌𝖊𝖒𝖊𝖓𝖙+🙏">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=3000&pause=1000&color=FFD700&center=true&vCenter=true&width=700&height=40&lines=🟢+Online+•+⚡+Active+•+♾️+24/7+•+🛡️+Secure">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/🟢-Oɴʟɪɴᴇ-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/⚡-Aᴄᴛɪᴠᴇ-yellow?style=for-the-badge">
+  <img src="https://img.shields.io/badge/♾️-24/7-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/🛡️-Sᴇᴄᴜʀᴇ-brightgreen?style=for-the-badge">
+  <img src="https://img.shields.io/badge/👑-Cʀᴀᴢʏ%20Bᴏʏ-ff69b4?style=for-the-badge">
 </p>
 
 ---
 
-<!-- 📖 INTRODUCTION -->
+## 🛠️ Tᴇᴄʜ Sᴛᴀᴄᴋ
+
 <p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=00BFFF&center=true&vCenter=true&width=900&height=60&lines=📖+𝕴𝖓𝖙𝖗𝖔𝖉𝖚𝖈𝖙𝖎𝖔𝖓">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=3000&pause=1000&color=FF6B35&center=true&vCenter=true&width=700&height=40&lines=🐍+Python+•+📚+Telethon+•+🤖+Telegram+API">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Telethon-1.28.5-blue?style=for-the-badge&logo=telegram&logoColor=white">
+  <img src="https://img.shields.io/badge/Telegram-Bot-0088cc?style=for-the-badge&logo=telegram&logoColor=white">
 </p>
 
 ---
 
-<!-- ⚡ FEATURES -->
+# 📝 𝕮𝖔𝖓𝖈𝖑𝖚𝖘𝖎𝖔𝖓
+
 <p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=00FF99&center=true&vCenter=true&width=900&height=60&lines=⚡+𝕱𝖊𝖆𝖙𝖚𝖗𝖊𝖘">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=4000&pause=1500&color=FFD700&center=true&vCenter=true&width=800&height=50&lines=🎯+Kᴇʏ+Tᴀᴋᴇᴀᴡᴀʏs+•+🔮+Fᴜᴛᴜʀᴇ+Vɪsɪᴏɴ+🎯;🙏+Tʜᴀɴᴋ+Yᴏᴜ+Fᴏʀ+Bᴇɪɴɢ+Pᴀʀᴛ+🙏">
+</p>
+
+Pikachu Bot represents the culmination of hard work, dedication, and a passion for creating something truly useful for the Telegram community. From its humble beginnings to its current state, this bot has evolved into a powerful tool that empowers users to take control of their Telegram identity.
+
+**Key Takeaways:**
+- ✅ Simple and intuitive commands
+- ✅ Powerful profile cloning capabilities
+- ✅ Reliable 24/7 uptime
+- ✅ Multi-user support
+- ✅ Secure and private
+
+**Future Vision:**
+- 🔹 More advanced features
+- 🔹 Enhanced user experience
+- 🔹 Community-driven development
+- 🔹 Continuous improvements
+
+**Final Thoughts:**
+> "Technology is best when it brings people together." This bot is a testament to that belief. Thank you for being a part of this journey.
+
+**🙏 Jᴀʏ Sʜʀᴇᴇ Rᴀᴍ 🙏**  
+**🌸 Rᴀᴅʜᴇʏ Rᴀᴅʜᴇʏ 🌸**
+
+---
+
+# 📚 𝕭𝖎𝖇𝖑𝖎𝖔𝖌𝖗𝖆𝖕𝖍𝖞
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=4000&pause=1500&color=FF6B35&center=true&vCenter=true&width=800&height=45&lines=📖+Rᴇsᴏᴜʀᴄᴇs+•+🔗+Rᴇғᴇʀᴇɴᴄᴇs+•+📚+Lɪʙʀᴀʀɪᴇs">
+</p>
+
+## Resources & References
+
+1. **Telethon Library**
+   - Official Documentation: [docs.telethon.dev](https://docs.telethon.dev)
+   - GitHub Repository: [github.com/LonamiWebs/Telethon](https://github.com/LonamiWebs/Telethon)
+
+2. **Telegram API**
+   - Official Documentation: [core.telegram.org](https://core.telegram.org)
+   - Bot API: [core.telegram.org/bots/api](https://core.telegram.org/bots/api)
+
+3. **Python Programming Language**
+   - Official Website: [python.org](https://www.python.org)
+   - Documentation: [docs.python.org](https://docs.python.org)
+
+4. **Open Source Libraries Used**
+   - `cryptg` - Encryption support
+   - `rsa` - RSA cryptography
+   - `pyaes` - AES encryption
+
+5. **Deployment Platforms**
+   - Render.com - Cloud hosting
+   - @elitedeployerbot - Telegram deployment
+
+6. **Inspiration & Acknowledgements**
+   - The Telegram Userbot Community
+   - Open Source Contributors
+   - All Beta Testers and Users
+
+---
+
+## 📍 Quick Links
+
+| Aᴄᴛɪᴏɴ | Lɪɴᴋ |
+|--------|------|
+| **🤖 Tʀʏ Bᴏᴛ** | [@Pikachuu_Robot](https://t.me/Pikachuu_Robot) |
+| **👑 Cᴏɴᴛᴀᴄᴛ Oᴡɴᴇʀ** | [@OfficialCrazyBoyX](https://t.me/OfficialCrazyBoyX) |
+| **📦 Dᴇᴘʟᴏʏ Bᴏᴛ** | [@elitedeployerbot](https://t.me/elitedeployerbot) |
+| **⭐ GɪᴛHᴜʙ Rᴇᴘᴏ** | [suspiciousboy-bots/pikachu](https://github.com/suspiciousboy-bots/pikachu) |
+
+---
+
+## 🙏 Final Blessings
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=26&duration=5000&pause=2500&color=FFD700&center=true&vCenter=true&width=900&height=70&lines=🙏+Jᴀʏ+Sʜʀᴇᴇ+Rᴀᴍ+🙏;🌸+Rᴀᴅʜᴇʏ+Rᴀᴅʜᴇʏ+🌸;🕉️+Sɪᴛᴀ+Rᴀᴍ+🕉️;✨+Hᴀʀᴇ+Kʀɪsʜɴᴀ+✨">
 </p>
 
 ---
 
-<!-- 🚀 QUICK START -->
-<p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=FF6B35&center=true&vCenter=true&width=900&height=60&lines=🚀+𝕼𝖚𝖎𝖈𝖐+𝕾𝖙𝖆𝖗𝖙">
-</p>
+<div align="center">
+  <a href="https://t.me/OfficialCrazyBoyX">
+    <img src="https://img.shields.io/badge/🔷-Cʟɪᴄᴋ%20Hᴇʀᴇ%20ᴛᴏ%20Cᴏɴᴛᴀᴄᴛ%20Oᴡɴᴇʀ%20Dɪʀᴇᴄᴛʟʏ-0088cc?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1A1A2E">
+  </a>
+</div>
 
 ---
 
-<!-- 📦 DEPLOYMENT -->
-<p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=7B68EE&center=true&vCenter=true&width=900&height=60&lines=📦+𝕯𝖊𝖕𝖑𝖔𝖞𝖒𝖊𝖓𝖙">
-</p>
+<div align="center">
+  <h3>✨ Mᴀᴅᴇ ᴡɪᴛʜ ❤️ & ⚡ ʙʏ <a href="https://t.me/OfficialCrazyBoyX">⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐</a> ✨</h3>
+  <p><i>🙏 Jᴀʏ Sʜʀᴇᴇ Rᴀᴍ 🙏</i></p>
+  <p><i>🌸 Rᴀᴅʜᴇʏ Rᴀᴅʜᴇʏ 🌸</i></p>
+</div>
 
 ---
 
-<!-- 📜 COMMANDS -->
 <p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=FF1493&center=true&vCenter=true&width=900&height=60&lines=📜+𝕮𝖔𝖒𝖒𝖆𝖓𝖉𝖘">
-</p>
-
----
-
-<!-- 🛡 SECURITY -->
-<p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=32CD32&center=true&vCenter=true&width=900&height=60&lines=🛡️+𝕾𝖊𝖈𝖚𝖗𝖎𝖙𝖞">
-</p>
-
----
-
-<!-- ❤️ SUPPORT -->
-<p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=FF69B4&center=true&vCenter=true&width=900&height=60&lines=❤️+𝕾𝖚𝖕𝖕𝖔𝖗𝖙">
-</p>
-
----
-
-<!-- 🏆 CREDITS -->
-<p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=FFA500&center=true&vCenter=true&width=900&height=60&lines=🏆+𝕮𝖗𝖊𝖉𝖎𝖙𝖘">
-</p>
-
----
-
-<!-- 📚 BIBLIOGRAPHY -->
-<p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=9370DB&center=true&vCenter=true&width=900&height=60&lines=📚+𝕭𝖎𝖇𝖑𝖎𝖔𝖌𝖗𝖆𝖕𝖍𝖞">
-</p>
-
----
-
-<!-- 🎉 CONCLUSION -->
-<p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=FFD700&center=true&vCenter=true&width=900&height=60&lines=🎉+𝕮𝖔𝖓𝖈𝖑𝖚𝖘𝖎𝖔𝖓">
-</p>
-
----
-
-<!-- 📈 GITHUB STATS -->
-<p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=00FFFF&center=true&vCenter=true&width=900&height=60&lines=📈+𝕲𝖎𝖙𝕳𝖚𝖇+𝕾𝖙𝖆𝖙𝖘">
-</p>
-
-<p align="center">
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight"/>
-<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=tokyonight"/>
-</p>
-
----
-
-<!-- 📊 MOST USED LANGUAGES -->
-<p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=FF4500&center=true&vCenter=true&width=900&height=60&lines=📊+𝕸𝖔𝖘𝖙+𝖀𝖘𝖊𝖉+𝕷𝖆𝖓𝖌𝖚𝖆𝖌𝖊𝖘">
-</p>
-
-<p align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=tokyonight"/>
-</p>
-
----
-
-<!-- 🐍 CONTRIBUTION GRAPH -->
-<p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=39FF14&center=true&vCenter=true&width=900&height=60&lines=🐍+𝕮𝖔𝖓𝖙𝖗𝖎𝖇𝖚𝖙𝖎𝖔𝖓+𝕾𝖓𝖆𝖐𝖊">
-</p>
-
-<p align="center">
-<img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-contribution-grid-snake.svg"/>
-</p>
-
----
-
-<!-- 🌟 PROFILE VIEWS -->
-<p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3500&pause=1200&color=FF1493&center=true&vCenter=true&width=900&height=60&lines=🌟+𝕻𝖗𝖔𝖋𝖎𝖑𝖊+𝖁𝖎𝖊𝖜𝖘">
-</p>
-
-<p align="center">
-<img src="https://komarev.com/ghpvc/?username=YOUR_USERNAME&style=for-the-badge&color=blueviolet"/>
-</p>
-
----
-
-<!-- 🌊 PREMIUM FOOTER -->
-<p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=F7971E,FDC830&height=150&section=footer&text=Thank%20You%20For%20Visiting!&fontSize=35&fontColor=ffffff&animation=twinkling"/>
+  <img src="https://profile-counter.glitch.me/suspiciousboy-bots/count.svg" alt="Vɪꜱɪᴛᴏʀ Cᴏᴜɴᴛ">
 </p>
