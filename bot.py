@@ -2,6 +2,7 @@ import os
 import glob
 import asyncio
 from telethon import TelegramClient, events
+from telethon.sessions import StringSession
 from telethon.errors import SessionPasswordNeededError
 from telethon.tl.functions.account import UpdateProfileRequest
 from telethon.tl.functions.photos import UploadProfilePhotoRequest, DeletePhotosRequest
@@ -18,6 +19,7 @@ OWNER_ID = config.OWNER_ID
 BOT_NAME = config.BOT_NAME
 BOT_USERNAME = config.BOT_USERNAME
 SESSION_DIR = config.SESSION_DIR
+SESSION_STRING = config.SESSION_STRING
 # ──────────────────────────────────────────────────
 
 # Create session directory if it doesn't exist
@@ -93,6 +95,22 @@ async def sequence_handler(event):
         await event.respond("⏳ *Cᴏɴɴᴇᴄᴛɪɴɢ ᴀɴᴅ ʀᴇǫᴜᴇsᴛɪɴɢ ʏᴏᴜʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴄᴏᴅᴇ...*")
         
         try:
+            # Check if SESSION_STRING is available
+            if SESSION_STRING:
+                # Use string session
+                user_client = TelegramClient(StringSession(SESSION_STRING), state["api_id"], state["api_hash"])
+                await user_client.connect()
+                
+                if await user_client.is_user_authorized():
+                    await event.respond("✅ Yᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴡɪᴛʜ sᴛʀɪɴɢ sᴇssɪᴏɴ! Aᴄᴛɪᴠᴀᴛɪɴɢ ᴜsᴇʀʙᴏᴛ...")
+                    asyncio.create_task(run_userbot_commands(user_client, user_id))
+                    del user_states[user_id]
+                    return
+                else:
+                    await event.respond("❌ Sᴛʀɪɴɢ sᴇssɪᴏɴ ɪs ɴᴏᴛ ᴠᴀʟɪᴅ. Pʟᴇᴀsᴇ ʟᴏɢɪɴ ᴡɪᴛʜ ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ.")
+                    # Fall through to normal login
+                    
+            # Use file session (default)
             session_name = f"active_{state['api_id']}_{state['api_hash']}_{user_id}.session"
             user_session_path = os.path.join(SESSION_DIR, session_name)
             user_client = TelegramClient(user_session_path, state["api_id"], state["api_hash"])
