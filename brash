@@ -1,0 +1,7 @@
+# Create a new repository on GitHub
+# Then push your code there
+git init
+git add .
+git commit -m "Initial commit - Pikachu Userbot"
+git remote add origin https://github.com/YOUR_USERNAME/pikachu-userbot.git
+git push -u origin main
