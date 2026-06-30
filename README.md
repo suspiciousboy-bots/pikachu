@@ -28,16 +28,24 @@
 
 ---
 
-<div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&pause=1000&color=F7E300&center=true&vCenter=true&width=435&lines=⚡+Cʟᴏɴᴇ+Aɴʏ+Pʀᴏғɪʟᴇ;📸+Sᴀᴠᴇ+Iᴅᴇɴᴛɪᴛʏ;🔄+Rᴇsᴛᴏʀᴇ+Iɴsᴛᴀɴᴛʟʏ;♾️+Uɴʟɪᴍɪᴛᴇᴅ+Aᴜᴛᴏ-Rᴇᴄᴏɴɴᴇᴄᴛ">
-</div>
-
----
-
 ## 🕉️ **Jᴀʏ Sʜʀᴇᴇ Rᴀᴍ 🙏 | Rᴀᴅʜᴇʏ Rᴀᴅʜᴇʏ 🌸**
 
 <p align="center">
-  <img src="https://telegra.ph/file/9f8d3e6a7b8c0d4f2d8a9.gif" width="100%">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=5000&pause=2000&color=FF6B35&center=true&vCenter=true&width=600&lines=🙏+Jᴀʏ+Sʜʀᴇᴇ+Rᴀᴍ+🙏;🌸+Rᴀᴅʜᴇʏ+Rᴀᴅʜᴇʏ+🌸;🕉️+Hᴀʀᴇ+Kʀɪsʜɴᴀ+Hᴀʀᴇ+Rᴀᴍᴀ+🕉️;✨+Bʟᴇssɪɴɢs+Uᴘᴏɴ+Yᴏᴜ+✨">
+</p>
+
+---
+
+## 🌟 **Iɴᴛʀᴏᴅᴜᴄᴛɪᴏɴ**
+
+<div align="center">
+  <img src="https://media.giphy.com/media/26Ff5O5rK5PqDz5l6/giphy.gif" width="200">
+  <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" width="200">
+  <img src="https://media.giphy.com/media/3o6Zt3bZVcSQn5VzFq/giphy.gif" width="200">
+</div>
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=6000&pause=1500&color=FF6B35&center=true&vCenter=true&width=800&lines=⚡+Pɪᴋᴀᴄʜᴜ+Bᴏᴛ+ɪs+ʏᴏᴜʀ+ᴜʟᴛɪᴍᴀᴛᴇ+ᴛᴏᴏʟ+ғᴏʀ+ᴛʜᴇ+ᴛᴇʟᴇɢʀᴀᴍ;📸+Cʟᴏɴᴇ+ᴀɴʏ+ᴘʀᴏғɪʟᴇ+ɪɴsᴛᴀɴᴛʟʏ;💾+Bᴀᴄᴋᴜᴘ+ʏᴏᴜʀ+ɪᴅᴇɴᴛɪᴛʏ+ᴡɪᴛʜ+ᴇᴀsᴇ;🔄+Rᴇsᴛᴏʀᴇ+ʏᴏᴜʀ+ᴏʀɪɢɪɴᴀʟ+ʟᴏᴏᴋ+ᴀɴʏᴛɪᴍᴇ;♾️+24/7+ᴀᴜᴛᴏ-ʀᴇᴄᴏɴɴᴇᴄᴛ+ғᴏʀ+ᴜɴʟɪᴍɪᴛᴇᴅ+ᴜᴘᴛɪᴍᴇ">
 </p>
 
 ---
@@ -81,6 +89,7 @@
 
 <div align="center">
   <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" width="200">
+  <img src="https://media.giphy.com/media/26Ff5O5rK5PqDz5l6/giphy.gif" width="200">
 </div>
 
 ### 1️⃣ Sᴛᴀʀᴛ ᴛʜᴇ Bᴏᴛ
