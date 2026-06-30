@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=2000&pause=1000&color=FF6B35&center=true&vCenter=true&width=900&height=70&lines=🙏+Jᴀʏ+Sʜʀᴇᴇ+Rᴀᴍ+🙏;🌸+Rᴀᴅʜᴇʏ+Rᴀᴅʜᴇʏ+🌸;🕉️+Hᴀʀᴇ+Kʀɪsʜɴᴀ+Hᴀʀᴇ+Rᴀᴍᴀ+🕉️;✨+Wᴇʟᴄᴏᴍᴇ+ᴛᴏ+Pɪᴋᴀᴄʜᴜ+Bᴏᴛ+✨">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=2000&pause=1000&color=FF6B35&center=true&vCenter=true&width=900&height=70&lines=🙏+Jᴀʏ+Sʜʀᴇᴇ+Rᴀᴍ+🙏;🌸+Rᴀᴅʜᴇʏ+Rᴀᴅʜᴇʏ+🌸;🕉️+Hᴀʀᴇ+Kʀɪsʜɴᴀ+Hᴀʀᴇ+Rᴀᴍᴀ+🕉️;✨+Wᴇʟᴄᴏᴍᴇ+ᴛᴏ+PɪᴋᴀᴄʜᴜX+✨">
 </p>
 
 ---
@@ -13,24 +13,22 @@
 First and foremost, I bow down to **Lord Rama** and **Radha Rani** for their divine blessings and guidance throughout this journey. Their grace has been the foundation of this project.
 
 I extend my heartfelt gratitude to:
-- **The Telegram Community** for their continuous support and inspiration
-- **All Users** who trust and use this bot
-- **My Friends & Family** for their encouragement
-- **The Open Source Community** for their invaluable contributions
-
-This project stands on the shoulders of countless developers who have shared their knowledge and code with the world. May we all continue to grow and learn together.
+- **The Telegram Community** for their continuous support and inspiration.
+- **All Users** who trust and use this bot to manage their Telegram workflow.
+- **My Friends & Family** for their constant encouragement.
+- **The Open Source Community** for providing the building blocks that made this development possible.
 
 ---
 
 # 📖 𝕴𝖓𝖙𝖗𝖔𝖉𝖚𝖈𝖙𝖎𝖔𝖓
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=4000&pause=1500&color=FF6B35&center=true&vCenter=true&width=800&height=50&lines=⚡+Pɪᴋᴀᴄʜᴜ+Bᴏᴛ+•+Tʜᴇ+Uʟᴛɪᴍᴀᴛᴇ+Mᴀɴᴀɢᴇʀ+⚡;✨+Pᴏᴡᴇʀ+•+Sɪᴍᴘʟɪᴄɪᴛʏ+•+Rᴇʟɪᴀʙɪʟɪᴛʏ+✨">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=4000&pause=1500&color=FF6B35&center=true&vCenter=true&width=800&height=50&lines=⚡+PɪᴋᴀᴄʜᴜX+•+Tʜᴇ+Uʟᴛɪᴍᴀᴛᴇ+Mᴀɴᴀɢᴇʀ+⚡;✨+Pᴏᴡᴇʀ+•+Sɪᴍᴘʟɪᴄɪᴛʏ+•+Rᴇʟɪᴀʙɪʟɪᴛʏ+✨">
 </p>
 
 <div align="center">
-  <h1>⚡ PIⱤᗩᑕᕼᑌ ᗰᑌᒪTI-ᑌՏᗴᖇ ᗷOT ᗰᗩᑎᗩᘜᗴᖇ ⚡</h1>
-  <p><strong>✨ Tʜᴇ Mᴏsᴛ Aᴅᴠᴀɴᴄᴇᴅ Tᴇʟᴇɢʀᴀᴍ Uꜱᴇʀʙᴏᴛ Mᴀɴᴀɢᴇʀ ✨</strong></p>
+  <h1>⚡ 𝕻𝕴𝕶𝕬𝕮𝕳𝖀𝖃 𝕸𝖀𝕭𝕿𝕴-𝖀𝕾𝕰𝕽 𝕭𝕺𝕿 𝕸𝖬𝕹𝕬𝕲𝕰𝕽 ⚡</h1>
+  <p><strong>✨ The Most Advanced Telegram Userbot & Profile Manager Ecosystem ✨</strong></p>
 </div>
 
 <p align="center">
@@ -49,63 +47,60 @@ This project stands on the shoulders of countless developers who have shared the
   <img src="https://komarev.com/ghpvc/?username=pikachu&label=✨%20Bᴏᴛ%20Uꜱᴇʀꜱ&color=ff69b4&style=for-the-badge">
 </p>
 
----
-
-## 👑 **Oᴡɴᴇʀ: ⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐**
-
-<p align="center">
-  <a href="https://t.me/OfficialCrazyBoyX">
-    <img src="https://img.shields.io/badge/📩-Cᴏɴᴛᴀᴄᴛ%20Oᴡɴᴇʀ-ff69b4?style=for-the-badge&logo=telegram&logoColor=white">
-  </a>
-  <a href="https://t.me/OfficialCrazyBoyX">
-    <img src="https://img.shields.io/badge/💬-Cʜᴀᴛ%20ᴡɪᴛʜ%20Oᴡɴᴇʀ-20B2AA?style=for-the-badge&logo=telegram&logoColor=white">
-  </a>
-  <a href="https://t.me/OfficialCrazyBoyX">
-    <img src="https://img.shields.io/badge/👤-Oᴡɴᴇʀ%20Pʀᴏғɪʟᴇ-1E90FF?style=for-the-badge&logo=telegram&logoColor=white">
-  </a>
-</p>
-
----
-
-## 🎯 **Pʀᴏʟᴏɢᴜᴇ**
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=4000&pause=1500&color=FFD700&center=true&vCenter=true&width=900&height=50&lines=🔹+Sɪᴍᴘʟɪᴄɪᴛʏ+•+🔹+Pᴏᴡᴇʀ+•+🔹+Rᴇʟɪᴀʙɪʟɪᴛʏ+•+🔹+Sᴇᴄᴜʀɪᴛʏ">
-</p>
-
-Pikachu Bot is a powerful, multi-user Telegram userbot manager designed to give you complete control over your Telegram profile. Whether you want to clone someone's profile, backup your identity, or restore your original look, Pikachu Bot makes it effortless.
-
-**Why Pikachu Bot?**
-- 🔹 **Simplicity** - Easy to use commands
-- 🔹 **Power** - Clone any profile instantly
-- 🔹 **Reliability** - 24/7 uptime with auto-reconnect
-- 🔹 **Security** - Your sessions are always safe
+### 🎯 Overview
+PikachuX Bot is an enterprise-grade, multi-user Telegram assistant infrastructure designed to hand you total domain authority over your Telegram accounts. Whether your goal is synchronization, identity templating, instant backups, or systematic profiles restoration, PikachuX wraps powerful API operations inside simplified, chat-based execution patterns.
 
 ---
 
 # 🛠️ 𝕸𝖆𝖎𝖓 𝕭𝖔𝖉𝖞
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=4000&pause=1500&color=FF6B35&center=true&vCenter=true&width=800&height=50&lines=⚡+Cᴏʀᴇ+Fᴇᴀᴛᴜʀᴇs+•+Cᴏᴍᴍᴀɴᴅs+•+Dᴇᴘʟᴏʏᴍᴇɴᴛ+⚡;🛠️+Eᴠᴇʀʏᴛʜɪɴɢ+Yᴏᴜ+Nᴇᴇᴅ+🛠️">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=4000&pause=1500&color=00b894&center=true&vCenter=true&width=800&height=50&lines=⚙️+Cᴏᴍᴍᴀɴᴅꜱ+🎰+Sᴇᴛᴜᴘ+🛠️+Aʀᴄʜɪᴛᴇᴄᴛᴜʀᴇ">
 </p>
 
-## ⚡ Fᴇᴀᴛᴜʀᴇs Oᴠᴇʀᴠɪᴇᴡ
+## ⚡ Features Overview
 
-| Fᴇᴀᴛᴜʀᴇ | Cᴏᴍᴍᴀɴᴅ | Dᴇsᴄʀɪᴘᴛɪᴏɴ |
-|---------|---------|-------------|
-| ⚡ **Pʀᴏғɪʟᴇ Cʟᴏɴɪɴɢ** | `.clone` | Cʟᴏɴᴇ ᴀɴʏ ᴜsᴇʀ's ᴘʀᴏғɪʟᴇ (ɴᴀᴍᴇ, ʙɪᴏ, ᴘʜᴏᴛᴏ) |
-| 📸 **Iᴅᴇɴᴛɪᴛʏ Bᴀᴄᴋᴜᴘ** | `.reidentify` | Sᴀᴠᴇ ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ ᴘʀᴏғɪʟᴇ ᴀs ʙᴀᴄᴋᴜᴘ |
-| 🔄 **Iᴅᴇɴᴛɪᴛʏ Rᴇsᴛᴏʀᴇ** | `.return` | Rᴇsᴛᴏʀᴇ ʏᴏᴜʀ ᴏʀɪɢɪɴᴀʟ ᴘʀᴏғɪʟᴇ ɪɴsᴛᴀɴᴛʟʏ |
-| 👥 **Mᴜʟᴛɪ-Uꜱᴇʀ Sᴜᴘᴘᴏʀᴛ** | `/start` | Mᴜʟᴛɪᴘʟᴇ ᴜsᴇʀs ᴡɪᴛʜ sᴇᴘᴀʀᴀᴛᴇ sᴇssɪᴏɴs |
-| ♾️ **Aᴜᴛᴏ-Rᴇᴄᴏɴɴᴇᴄᴛ** | 🔄 | Aᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ʀᴇᴄᴏɴɴᴇᴄᴛs ɪғ ᴅɪsᴄᴏɴɴᴇᴄᴛᴇᴅ |
-| 🛡️ **24/7 Uᴘᴛɪᴍᴇ** | ⏰ | Aʟᴡᴀʏs ᴏɴʟɪɴᴇ, ᴀʟᴡᴀʏs ʀᴇᴀᴅʏ |
+| Feature | Command | Description |
+| :--- | :--- | :--- |
+| ⚡ **Profile Cloning** | `.clone` | Replicates target profile configuration (Name, Bio, Avatars) instantly. |
+| 📸 **Identity Backup** | `.reidentify`| Captures and persists state snapshots of your live profile identity. |
+| 🔄 **Identity Restore**| `.return` | Reverts back to an explicitly defined snapshot state flawlessly. |
+| 👥 **Multi-User Core** | `/start` | Isolates concurrent environment configurations securely per user session. |
+| ♾️ **Auto-Reconnect** | `Automated` | Internal heartbeat monitor that prevents service interruptions. |
+| 🛡️ **24/7 Engine** | `Managed` | Cloud-optimized architecture ensuring complete cron execution uptime. |
 
 ---
 
-## 🚀 Qᴜɪᴄᴋ Sᴛᴀʀᴛ Gᴜɪᴅᴇ
+## 🚀 Quick Start & Deployment Guide
 
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=FFD700&center=true&vCenter=true&width=700&height=45&lines=🚀+Sᴛᴀʀᴛ+ɪɴ+3+Eᴀsʏ+Sᴛᴇᴘs+🚀">
-</p>
+Follow these steps to establish your own implementation instance of the **PikachuX** network.
 
-### Step 1: Sᴛᴀʀᴛ ᴛʜᴇ Bᴏᴛ
+### Step 1: Session Generation
+1. Initialize communication via Telegram with your customized deployer gateway.
+2. Authenticate the instance utilizing your secure API ID and API Hash protocols.
+
+### Step 2: Render Deployment Blueprint
+Click the button below to map the deployment environment on Render:
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
+#### `render.yaml` Configuration Architecture
+```yaml
+services:
+  - type: web
+    name: pikachux-bot-manager
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 -m pikachux
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: SESSION_STRING
+        sync: false
+      - key: MONGO_DB_URI
+        sync: false
