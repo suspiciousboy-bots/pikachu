@@ -1,12 +1,18 @@
 # ⚡ Pikachu Multi-User Bot Manager
 
-## 🚀 Deployment
-
-### Environment Variables Required:
-- `BOT_TOKEN` - Your bot token from @BotFather
-- `API_ID` - Your Telegram API ID
-- `API_HASH` - Your Telegram API Hash
-- `OWNER_ID` - Your Telegram User ID
-
 ## 👑 Owner
 ⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐
+
+## 🚀 Features
+- Multi-user deployment
+- Profile cloning (.clone)
+- Identity backup (.reidentify)
+- Identity restoration (.return)
+- Auto-session restoration
+
+## 🔧 Environment Variables
+- `BOT_TOKEN` - Bot token from @BotFather
+- `API_ID` - Telegram API ID
+- `API_HASH` - Telegram API Hash
+- `OWNER_NAME` - Owner's display name
+- `OWNER_ID` - Owner's Telegram ID
