@@ -1,148 +1,89 @@
+# 🙏 ACKNOWLEDGEMENT
 
-### Environment Variables Required
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=FF6B35&center=true&vCenter=true&width=800&height=60&lines=🙏+Jᴀʏ+Sʜʀᴇᴇ+Rᴀᴍ+🙏;🌸+Rᴀᴅʜᴇʏ+Rᴀᴅʜᴇʏ+🌸">
+</p>
 
-| Vᴀʀɪᴀʙʟᴇ | Dᴇsᴄʀɪᴘᴛɪᴏɴ | Wʜᴇʀᴇ ᴛᴏ Gᴇᴛ |
-|----------|-------------|--------------|
-| `BOT_TOKEN` | Bᴏᴛ ᴛᴏᴋᴇɴ ғʀᴏᴍ @BotFather | @BotFather |
-| `API_ID` | Yᴏᴜʀ API ID | my.telegram.org |
-| `API_HASH` | Yᴏᴜʀ API Hᴀsʜ | my.telegram.org |
-| `OWNER_ID` | Yᴏᴜʀ Tᴇʟᴇɢʀᴀᴍ Uꜱᴇʀ ID | @userinfobot |
-| `OWNER_NAME` | Yᴏᴜʀ ᴅɪsᴘʟᴀʏ ɴᴀᴍᴇ | Cᴜsᴛᴏᴍ |
-| `BOT_NAME` | Bᴏᴛ ᴅɪsᴘʟᴀʏ ɴᴀᴍᴇ | Cᴜsᴛᴏᴍ |
-| `BOT_USERNAME` | Bᴏᴛ ᴜsᴇʀɴᴀᴍᴇ (ᴡɪᴛʜᴏᴜᴛ @) | @BotFather |
+𝙵𝚒𝚛𝚜𝚝 𝚊𝚗𝚍 𝚏𝚘𝚛𝚎𝚖𝚘𝚜𝚝, 𝙸 𝚋𝚘𝚠 𝚍𝚘𝚠𝚗 𝚝𝚘 **𝙻𝚘𝚛𝚍 𝚁𝚊𝚖𝚊** 𝚊𝚗𝚍 **𝚁𝚊𝚍𝚑𝚊 𝚁𝚊𝚗𝚒** 𝚏𝚘𝚛 𝚝𝚑𝚎𝚒𝚛 𝚍𝚒𝚟𝚒𝚗𝚎 𝚋𝚕𝚎𝚜𝚜𝚒𝚗𝚐𝚜 𝚊𝚗𝚍 𝚐𝚞𝚒𝚍𝚊𝚗𝚌𝚎 𝚝𝚑𝚛𝚘𝚞𝚐𝚑𝚘𝚞𝚝 𝚝𝚑𝚒𝚜 𝚓𝚘𝚞𝚛𝚗𝚎𝚢. 𝚃𝚑𝚎𝚒𝚛 𝚐𝚛𝚊𝚌𝚎 𝚑𝚊𝚜 𝚋𝚎𝚎𝚗 𝚝𝚑𝚎 𝚏𝚘𝚞𝚗𝚍𝚊𝚝𝚒𝚘𝚗 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚛𝚘𝚓𝚎𝚌𝚝.
+
+𝙸 𝚎𝚡𝚝𝚎𝚗𝚍 𝚖𝚢 𝚑𝚎𝚊𝚛𝚝𝚏𝚎𝚕𝚝 𝚐𝚛𝚊𝚝𝚒𝚝𝚞𝚍𝚎 𝚝𝚘:
+- **𝚃𝚑𝚎 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 𝙲𝚘𝚖𝚖𝚞𝚗𝚒𝚝𝚢** 𝚏𝚘𝚛 𝚝𝚑𝚎𝚒𝚛 𝚌𝚘𝚗𝚝𝚒𝚗𝚞𝚘𝚞𝚜 𝚜𝚞𝚙𝚙𝚘𝚛𝚝 𝚊𝚗𝚍 𝚒𝚗𝚜𝚙𝚒𝚛𝚊𝚝𝚒𝚘𝚗
+- **𝙰𝚕𝚕 𝚄𝚜𝚎𝚛𝚜** 𝚠𝚑𝚘 𝚝𝚛𝚞𝚜𝚝 𝚊𝚗𝚍 𝚞𝚜𝚎 𝚝𝚑𝚒𝚜 𝚋𝚘𝚝
+- **𝙼𝚢 𝙵𝚛𝚒𝚎𝚗𝚍𝚜 & 𝙵𝚊𝚖𝚒𝚕𝚢** 𝚏𝚘𝚛 𝚝𝚑𝚎𝚒𝚛 𝚎𝚗𝚌𝚘𝚞𝚛𝚊𝚐𝚎𝚖𝚎𝚗𝚝
+- **𝚃𝚑𝚎 𝙾𝚙𝚎𝚗 𝚂𝚘𝚞𝚛𝚌𝚎 𝙲𝚘𝚖𝚖𝚞𝚗𝚒𝚝𝚢** 𝚏𝚘𝚛 𝚝𝚑𝚎𝚒𝚛 𝚒𝚗𝚟𝚊𝚕𝚞𝚊𝚋𝚕𝚎 𝚌𝚘𝚗𝚝𝚛𝚒𝚋𝚞𝚝𝚒𝚘𝚗𝚜
+
+𝚃𝚑𝚒𝚜 𝚙𝚛𝚘𝚓𝚎𝚌𝚝 𝚜𝚝𝚊𝚗𝚍𝚜 𝚘𝚗 𝚝𝚑𝚎 𝚜𝚑𝚘𝚞𝚕𝚍𝚎𝚛𝚜 𝚘𝚏 𝚌𝚘𝚞𝚗𝚝𝚕𝚎𝚜𝚜 𝚍𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛𝚜 𝚠𝚑𝚘 𝚑𝚊𝚟𝚎 𝚜𝚑𝚊𝚛𝚎𝚍 𝚝𝚑𝚎𝚒𝚛 𝚔𝚗𝚘𝚠𝚕𝚎𝚍𝚐𝚎 𝚊𝚗𝚍 𝚌𝚘𝚍𝚎 𝚠𝚒𝚝𝚑 𝚝𝚑𝚎 𝚠𝚘𝚛𝚕𝚍. 𝙼𝚊𝚢 𝚠𝚎 𝚊𝚕𝚕 𝚌𝚘𝚗𝚝𝚒𝚗𝚞𝚎 𝚝𝚘 𝚐𝚛𝚘𝚠 𝚊𝚗𝚍 𝚕𝚎𝚊𝚛𝚗 𝚝𝚘𝚐𝚎𝚝𝚑𝚎𝚛.
 
 ---
 
-## 📊 Bᴏᴛ Sᴛᴀᴛᴜs
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=3000&pause=1000&color=FFD700&center=true&vCenter=true&width=700&height=40&lines=🟢+Online+•+⚡+Active+•+♾️+24/7+•+🛡️+Secure">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/🟢-Oɴʟɪɴᴇ-success?style=for-the-badge">
-  <img src="https://img.shields.io/badge/⚡-Aᴄᴛɪᴠᴇ-yellow?style=for-the-badge">
-  <img src="https://img.shields.io/badge/♾️-24/7-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/🛡️-Sᴇᴄᴜʀᴇ-brightgreen?style=for-the-badge">
-  <img src="https://img.shields.io/badge/👑-Cʀᴀᴢʏ%20Bᴏʏ-ff69b4?style=for-the-badge">
-</p>
-
----
-
-## 🛠️ Tᴇᴄʜ Sᴛᴀᴄᴋ
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=3000&pause=1000&color=FF6B35&center=true&vCenter=true&width=700&height=40&lines=🐍+Python+•+📚+Telethon+•+🤖+Telegram+API">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge&logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/Telethon-1.28.5-blue?style=for-the-badge&logo=telegram&logoColor=white">
-  <img src="https://img.shields.io/badge/Telegram-Bot-0088cc?style=for-the-badge&logo=telegram&logoColor=white">
-</p>
-
----
-
-# 📝 𝕮𝖔𝖓𝖈𝖑𝖚𝖘𝖎𝖔𝖓
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=4000&pause=1500&color=FFD700&center=true&vCenter=true&width=800&height=50&lines=🎯+Kᴇʏ+Tᴀᴋᴇᴀᴡᴀʏs+•+🔮+Fᴜᴛᴜʀᴇ+Vɪsɪᴏɴ+🎯;🙏+Tʜᴀɴᴋ+Yᴏᴜ+Fᴏʀ+Bᴇɪɴɢ+Pᴀʀᴛ+🙏">
-</p>
-
-Pikachu Bot represents the culmination of hard work, dedication, and a passion for creating something truly useful for the Telegram community. From its humble beginnings to its current state, this bot has evolved into a powerful tool that empowers users to take control of their Telegram identity.
-
-**Key Takeaways:**
-- ✅ Simple and intuitive commands
-- ✅ Powerful profile cloning capabilities
-- ✅ Reliable 24/7 uptime
-- ✅ Multi-user support
-- ✅ Secure and private
-
-**Future Vision:**
-- 🔹 More advanced features
-- 🔹 Enhanced user experience
-- 🔹 Community-driven development
-- 🔹 Continuous improvements
-
-**Final Thoughts:**
-> "Technology is best when it brings people together." This bot is a testament to that belief. Thank you for being a part of this journey.
-
-**🙏 Jᴀʏ Sʜʀᴇᴇ Rᴀᴍ 🙏**  
-**🌸 Rᴀᴅʜᴇʏ Rᴀᴅʜᴇʏ 🌸**
-
----
-
-# 📚 𝕭𝖎𝖇𝖑𝖎𝖔𝖌𝖗𝖆𝖕𝖍𝖞
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=4000&pause=1500&color=FF6B35&center=true&vCenter=true&width=800&height=45&lines=📖+Rᴇsᴏᴜʀᴄᴇs+•+🔗+Rᴇғᴇʀᴇɴᴄᴇs+•+📚+Lɪʙʀᴀʀɪᴇs">
-</p>
-
-## Resources & References
-
-1. **Telethon Library**
-   - Official Documentation: [docs.telethon.dev](https://docs.telethon.dev)
-   - GitHub Repository: [github.com/LonamiWebs/Telethon](https://github.com/LonamiWebs/Telethon)
-
-2. **Telegram API**
-   - Official Documentation: [core.telegram.org](https://core.telegram.org)
-   - Bot API: [core.telegram.org/bots/api](https://core.telegram.org/bots/api)
-
-3. **Python Programming Language**
-   - Official Website: [python.org](https://www.python.org)
-   - Documentation: [docs.python.org](https://docs.python.org)
-
-4. **Open Source Libraries Used**
-   - `cryptg` - Encryption support
-   - `rsa` - RSA cryptography
-   - `pyaes` - AES encryption
-
-5. **Deployment Platforms**
-   - Render.com - Cloud hosting
-   - @elitedeployerbot - Telegram deployment
-
-6. **Inspiration & Acknowledgements**
-   - The Telegram Userbot Community
-   - Open Source Contributors
-   - All Beta Testers and Users
-
----
-
-## 📍 Quick Links
-
-| Aᴄᴛɪᴏɴ | Lɪɴᴋ |
-|--------|------|
-| **🤖 Tʀʏ Bᴏᴛ** | [@Pikachuu_Robot](https://t.me/Pikachuu_Robot) |
-| **👑 Cᴏɴᴛᴀᴄᴛ Oᴡɴᴇʀ** | [@OfficialCrazyBoyX](https://t.me/OfficialCrazyBoyX) |
-| **📦 Dᴇᴘʟᴏʏ Bᴏᴛ** | [@elitedeployerbot](https://t.me/elitedeployerbot) |
-| **⭐ GɪᴛHᴜʙ Rᴇᴘᴏ** | [suspiciousboy-bots/pikachu](https://github.com/suspiciousboy-bots/pikachu) |
-
----
-
-## 🙏 Final Blessings
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=26&duration=5000&pause=2500&color=FFD700&center=true&vCenter=true&width=900&height=70&lines=🙏+Jᴀʏ+Sʜʀᴇᴇ+Rᴀᴍ+🙏;🌸+Rᴀᴅʜᴇʏ+Rᴀᴅʜᴇʏ+🌸;🕉️+Sɪᴛᴀ+Rᴀᴍ+🕉️;✨+Hᴀʀᴇ+Kʀɪsʜɴᴀ+✨">
-</p>
-
----
+# 📖 INTRODUCTION
 
 <div align="center">
-  <a href="https://t.me/OfficialCrazyBoyX">
-    <img src="https://img.shields.io/badge/🔷-Cʟɪᴄᴋ%20Hᴇʀᴇ%20ᴛᴏ%20Cᴏɴᴛᴀᴄᴛ%20Oᴡɴᴇʀ%20Dɪʀᴇᴄᴛʟʏ-0088cc?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1A1A2E">
+  <h1>⚡ PIⱤᗩᑕᕼᑌ ᗰᑌᒪTI-ᑌՏᗴᖇ ᗷOT ᗰᗩᑎᗩᘜᗴᖇ ⚡</h1>
+  <p><strong>✨ Tʜᴇ Mᴏsᴛ Aᴅᴠᴀɴᴄᴇᴅ Tᴇʟᴇɢʀᴀᴍ Uꜱᴇʀʙᴏᴛ Mᴀɴᴀɢᴇʀ ✨</strong></p>
+</div>
+
+<p align="center">
+  <a href="https://t.me/Pikachuu_Robot">
+    <img src="https://img.shields.io/badge/🚀-Tʀʏ%20Bᴏᴛ%20Nᴏᴡ-blue?style=for-the-badge&logo=telegram&logoColor=white&color=0088cc">
   </a>
-</div>
-
----
-
-<div align="center">
-  <h3>✨ Mᴀᴅᴇ ᴡɪᴛʜ ❤️ & ⚡ ʙʏ <a href="https://t.me/OfficialCrazyBoyX">⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐</a> ✨</h3>
-  <p><i>🙏 Jᴀʏ Sʜʀᴇᴇ Rᴀᴍ 🙏</i></p>
-  <p><i>🌸 Rᴀᴅʜᴇʏ Rᴀᴅʜᴇʏ 🌸</i></p>
-</div>
-
----
+  <a href="https://t.me/elitedeployerbot">
+    <img src="https://img.shields.io/badge/📦-Dᴇᴘʟᴏʏ%20Nᴏᴡ-brightgreen?style=for-the-badge&logo=telegram&logoColor=white&color=00b894">
+  </a>
+  <a href="https://t.me/OfficialCrazyBoyX">
+    <img src="https://img.shields.io/badge/👑-Cᴏɴᴛᴀᴄᴛ%20Oᴡɴᴇʀ-red?style=for-the-badge&logo=telegram&logoColor=white&color=ff4757">
+  </a>
+</p>
 
 <p align="center">
-  <img src="https://profile-counter.glitch.me/suspiciousboy-bots/count.svg" alt="Vɪꜱɪᴛᴏʀ Cᴏᴜɴᴛ">
+  <img src="https://komarev.com/ghpvc/?username=pikachu&label=✨%20Bᴏᴛ%20Uꜱᴇʀꜱ&color=ff69b4&style=for-the-badge">
 </p>
+
+---
+
+## 👑 **Oᴡɴᴇʀ: ⏤͟͞ 𝐂𝐑𝐀𝐙𝐘 𝐁𝐎𝐘 ᭄࿐**
+
+<p align="center">
+  <a href="https://t.me/OfficialCrazyBoyX">
+    <img src="https://img.shields.io/badge/📩-Cᴏɴᴛᴀᴄᴛ%20Oᴡɴᴇʀ-ff69b4?style=for-the-badge&logo=telegram&logoColor=white">
+  </a>
+  <a href="https://t.me/OfficialCrazyBoyX">
+    <img src="https://img.shields.io/badge/💬-Cʜᴀᴛ%20ᴡɪᴛʜ%20Oᴡɴᴇʀ-20B2AA?style=for-the-badge&logo=telegram&logoColor=white">
+  </a>
+  <a href="https://t.me/OfficialCrazyBoyX">
+    <img src="https://img.shields.io/badge/👤-Oᴡɴᴇʀ%20Pʀᴏғɪʟᴇ-1E90FF?style=for-the-badge&logo=telegram&logoColor=white">
+  </a>
+</p>
+
+---
+
+## 🎯 **Pʀᴏʟᴏɢᴜᴇ**
+
+𝙿𝚒𝚔𝚊𝚌𝚑𝚞 𝙱𝚘𝚝 𝚒𝚜 𝚊 𝚙𝚘𝚠𝚎𝚛𝚏𝚞𝚕, 𝚖𝚞𝚕𝚝𝚒-𝚞𝚜𝚎𝚛 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 𝚞𝚜𝚎𝚛𝚋𝚘𝚝 𝚖𝚊𝚗𝚊𝚐𝚎𝚛 𝚍𝚎𝚜𝚒𝚐𝚗𝚎𝚍 𝚝𝚘 𝚐𝚒𝚟𝚎 𝚢𝚘𝚞 𝚌𝚘𝚖𝚙𝚕𝚎𝚝𝚎 𝚌𝚘𝚗𝚝𝚛𝚘𝚕 𝚘𝚟𝚎𝚛 𝚢𝚘𝚞𝚛 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 𝚙𝚛𝚘𝚏𝚒𝚕𝚎. 𝚆𝚑𝚎𝚝𝚑𝚎𝚛 𝚢𝚘𝚞 𝚠𝚊𝚗𝚝 𝚝𝚘 𝚌𝚕𝚘𝚗𝚎 𝚜𝚘𝚖𝚎𝚘𝚗𝚎'𝚜 𝚙𝚛𝚘𝚏𝚒𝚕𝚎, 𝚋𝚊𝚌𝚔𝚞𝚙 𝚢𝚘𝚞𝚛 𝚒𝚍𝚎𝚗𝚝𝚒𝚝𝚢, 𝚘𝚛 𝚛𝚎𝚜𝚝𝚘𝚛𝚎 𝚢𝚘𝚞𝚛 𝚘𝚛𝚒𝚐𝚒𝚗𝚊𝚕 𝚕𝚘𝚘𝚔, 𝙿𝚒𝚔𝚊𝚌𝚑𝚞 𝙱𝚘𝚝 𝚖𝚊𝚔𝚎𝚜 𝚒𝚝 𝚎𝚏𝚏𝚘𝚛𝚝𝚕𝚎𝚜𝚜.
+
+**𝚆𝚑𝚢 𝙿𝚒𝚔𝚊𝚌𝚑𝚞 𝙱𝚘𝚝?**
+- 🔹 **𝚂𝚒𝚖𝚙𝚕𝚒𝚌𝚒𝚝𝚢** - 𝙴𝚊𝚜𝚢 𝚝𝚘 𝚞𝚜𝚎 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜
+- 🔹 **𝙿𝚘𝚠𝚎𝚛** - 𝙲𝚕𝚘𝚗𝚎 𝚊𝚗𝚢 𝚙𝚛𝚘𝚏𝚒𝚕𝚎 𝚒𝚗𝚜𝚝𝚊𝚗𝚝𝚕𝚢
+- 🔹 **𝚁𝚎𝚕𝚒𝚊𝚋𝚒𝚕𝚒𝚝𝚢** - 𝟸𝟺/𝟽 𝚞𝚙𝚝𝚒𝚖𝚎 𝚠𝚒𝚝𝚑 𝚊𝚞𝚝𝚘-𝚛𝚎𝚌𝚘𝚗𝚗𝚎𝚌𝚝
+- 🔹 **𝚂𝚎𝚌𝚞𝚛𝚒𝚝𝚢** - 𝚈𝚘𝚞𝚛 𝚜𝚎𝚜𝚜𝚒𝚘𝚗𝚜 𝚊𝚛𝚎 𝚊𝚕𝚠𝚊𝚢𝚜 𝚜𝚊𝚏𝚎
+
+---
+
+# 🛠️ MAIN BODY
+
+## ⚡ Fᴇᴀᴛᴜʀᴇs Oᴠᴇʀᴠɪᴇᴡ
+
+| Fᴇᴀᴛᴜʀᴇ | Cᴏᴍᴍᴀɴᴅ | Dᴇsᴄʀɪᴘᴛɪᴏɴ |
+|---------|---------|-------------|
+| ⚡ **Pʀᴏғɪʟᴇ Cʟᴏɴɪɴɢ** | `.clone` | Cʟᴏɴᴇ ᴀɴʏ ᴜsᴇʀ's ᴘʀᴏғɪʟᴇ (ɴᴀᴍᴇ, ʙɪᴏ, ᴘʜᴏᴛᴏ) |
+| 📸 **Iᴅᴇɴᴛɪᴛʏ Bᴀᴄᴋᴜᴘ** | `.reidentify` | Sᴀᴠᴇ ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ ᴘʀᴏғɪʟᴇ ᴀs ʙᴀᴄᴋᴜᴘ |
+| 🔄 **Iᴅᴇɴᴛɪᴛʏ Rᴇsᴛᴏʀᴇ** | `.return` | Rᴇsᴛᴏʀᴇ ʏᴏᴜʀ ᴏʀɪɢɪɴᴀʟ ᴘʀᴏғɪʟᴇ ɪɴsᴛᴀɴᴛʟʏ |
+| 👥 **Mᴜʟᴛɪ-Uꜱᴇʀ Sᴜᴘᴘᴏʀᴛ** | `/start` | Mᴜʟᴛɪᴘʟᴇ ᴜsᴇʀs ᴡɪᴛʜ sᴇᴘᴀʀᴀᴛᴇ sᴇssɪᴏɴs |
+| ♾️ **Aᴜᴛᴏ-Rᴇᴄᴏɴɴᴇᴄᴛ** | 🔄 | Aᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ʀᴇᴄᴏɴɴᴇᴄᴛs ɪғ ᴅɪsᴄᴏɴɴᴇᴄᴛᴇᴅ |
+| 🛡️ **24/7 Uᴘᴛɪᴍᴇ** | ⏰ | Aʟᴡᴀʏs ᴏɴʟɪɴᴇ, ᴀʟᴡᴀʏs ʀᴇᴀᴅʏ |
+
+---
+
+## 🚀 Qᴜɪᴄᴋ Sᴛᴀʀᴛ Gᴜɪᴅᴇ
+
+### Step 1: Sᴛᴀʀᴛ ᴛʜᴇ Bᴏᴛ
