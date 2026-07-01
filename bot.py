@@ -1,6 +1,8 @@
 import os
 import glob
 import asyncio
+import threading
+from flask import Flask
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.errors import SessionPasswordNeededError
@@ -10,7 +12,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import User
 from config import config
 
-# ────═◈═─ CONFIGURATION ─═◈═────
+# ────═◈═─ CONFIGURATION FROM CONFIG ─═◈═────
 BOT_TOKEN = config.BOT_TOKEN
 API_ID = config.API_ID
 API_HASH = config.API_HASH
@@ -22,15 +24,36 @@ SESSION_DIR = config.SESSION_DIR
 SESSION_STRING = config.SESSION_STRING
 # ──────────────────────────────────────────────────
 
+# Create Flask app for Render port binding
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "⚡ Pikachu Bot is running!"
+
+@app.route('/health')
+def health():
+    return "OK", 200
+
+def run_web():
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port, debug=False)
+
+# Create session directory if it doesn't exist
 if not os.path.exists(SESSION_DIR):
     os.makedirs(SESSION_DIR)
 
+# Tracks active live login states inside the Bot DM
 user_states = {}
+
+# Multi-user profile backup storage maps: { user_id: { first_name, last_name, about, has_photo, photo_file } }
 USER_BACKUPS = {}
 
+# Initialize the main Bot Manager
 bot_session_path = os.path.join(SESSION_DIR, "bot_manager_session")
 bot = TelegramClient(bot_session_path, API_ID, API_HASH, timeout=30)
 
+# ────═◈═─ PIKACHU BOT MANAGER ─═◈═────
 print("╔══════════════════════════════════════════════╗")
 print("║      ⚡ PIKACHU BOT MANAGER ⚡              ║")
 print(f"║          Bʏ: {OWNER_NAME}           ║")
@@ -91,7 +114,9 @@ async def sequence_handler(event):
         await event.respond("⏳ *Cᴏɴɴᴇᴄᴛɪɴɢ ᴀɴᴅ ʀᴇǫᴜᴇsᴛɪɴɢ ʏᴏᴜʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴄᴏᴅᴇ...*")
         
         try:
+            # Check if SESSION_STRING is available
             if SESSION_STRING:
+                # Use string session
                 user_client = TelegramClient(StringSession(SESSION_STRING), state["api_id"], state["api_hash"])
                 await user_client.connect()
                 
@@ -103,6 +128,7 @@ async def sequence_handler(event):
                 else:
                     await event.respond("❌ Sᴛʀɪɴɢ sᴇssɪᴏɴ ɪs ɴᴏᴛ ᴠᴀʟɪᴅ. Pʟᴇᴀsᴇ ʟᴏɢɪɴ ᴡɪᴛʜ ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ.")
                     
+            # Use file session (default)
             session_name = f"active_{state['api_id']}_{state['api_hash']}_{user_id}.session"
             user_session_path = os.path.join(SESSION_DIR, session_name)
             user_client = TelegramClient(user_session_path, state["api_id"], state["api_hash"])
@@ -174,6 +200,7 @@ async def run_userbot_commands(user_client, owner_id):
         print(f"  📦 BACKUP STATUS: {'BACKUP EXISTS' if my_id in USER_BACKUPS else 'NO BACKUP'}")
         print("•" * 50 + "\n")
 
+        # ────═◈═─ COMMAND: .clone ─═◈═────
         @user_client.on(events.NewMessage(outgoing=True, pattern=r"^\.clone(?: |$)"))
         async def clone_user(event):
             print(f"  🔄 .clone command DETECTED from user {my_id}!")
@@ -205,12 +232,14 @@ async def run_userbot_commands(user_client, owner_id):
                 await event.respond("❌ *Tᴀʀɢᴇᴛ ᴍᴜsᴛ ʙᴇ ᴀ Uꜱᴇʀ ᴀᴄᴄᴏᴜɴᴛ.*")
                 return
 
+            # Save current profile as backup BEFORE cloning (including photo)
             try:
                 my_full = await user_client(GetFullUserRequest(my_id))
                 my_bio = my_full.full_user.about or ""
             except Exception:
                 my_bio = ""
 
+            # Download current profile photo if exists
             photo_file = None
             if me.photo:
                 try:
@@ -228,18 +257,21 @@ async def run_userbot_commands(user_client, owner_id):
             }
             print(f"  📦 Backup saved for user {my_id}")
 
+            # Now clone the target
             try:
                 target_full = await user_client(GetFullUserRequest(target_user.id))
                 target_bio = target_full.full_user.about or ""
             except Exception:
                 target_bio = ""
 
+            # Update name and bio
             await user_client(UpdateProfileRequest(
                 first_name=target_user.first_name or "",
                 last_name=target_user.last_name or "",
                 about=target_bio
             ))
 
+            # Clone profile picture
             if target_user.photo:
                 await status_msg.delete()
                 status_msg = await event.respond("🔄 *Cʟᴏɴɪɴɢ ᴘʀᴏғɪʟᴇ ᴘɪᴄᴛᴜʀᴇ...*")
@@ -256,6 +288,7 @@ async def run_userbot_commands(user_client, owner_id):
             await event.respond(f"👤 *Sᴜᴄᴄᴇssғᴜʟʟʏ ᴄʟᴏɴᴇᴅ* [{target_user.first_name}](tg://user?id={target_user.id})*!*")
             print(f"  ✅ .clone completed for user {my_id}")
 
+        # ────═◈═─ COMMAND: .reidentify ─═◈═────
         @user_client.on(events.NewMessage(outgoing=True, pattern=r"^\.reidentify$"))
         async def reidentify_user(event):
             print(f"  🔄 .reidentify command DETECTED from user {my_id}!")
@@ -269,6 +302,7 @@ async def run_userbot_commands(user_client, owner_id):
                 my_full = await user_client(GetFullUserRequest(my_id))
                 my_bio = my_full.full_user.about or ""
                 
+                # Download current profile photo if exists
                 photo_file = None
                 if fresh_me.photo:
                     try:
@@ -293,6 +327,7 @@ async def run_userbot_commands(user_client, owner_id):
                 await status_msg.delete()
                 await event.respond(f"❌ *Fᴀɪʟᴇᴅ ᴛᴏ sᴀᴠᴇ ʙᴀᴄᴋᴜᴘ:* {e}")
 
+        # ────═◈═─ COMMAND: .return ─═◈═────
         @user_client.on(events.NewMessage(outgoing=True, pattern=r"^\.return$"))
         async def restore_user(event):
             print(f"  🔄 .return command DETECTED from user {my_id}!")
@@ -309,6 +344,7 @@ async def run_userbot_commands(user_client, owner_id):
             backup = USER_BACKUPS[my_id]
 
             try:
+                # Restore Name and Bio
                 await user_client(UpdateProfileRequest(
                     first_name=backup["first_name"],
                     last_name=backup["last_name"],
@@ -316,16 +352,21 @@ async def run_userbot_commands(user_client, owner_id):
                 ))
                 print(f"  ✅ Name and bio restored")
                 
+                # Restore Profile Picture (if it was backed up)
                 if backup.get("has_photo", False) and backup.get("photo_file"):
                     try:
+                        # Delete current photo(s)
                         async for photo in user_client.iter_profile_photos("me"):
                             await user_client(DeletePhotosRequest(id=[photo]))
                             break
                         
+                        # Upload and set saved photo
                         if os.path.exists(backup["photo_file"]):
                             file = await user_client.upload_file(backup["photo_file"])
                             await user_client(UploadProfilePhotoRequest(file=file))
                             print(f"  ✅ Profile picture restored")
+                            
+                            # Clean up the temporary file
                             os.remove(backup["photo_file"])
                         else:
                             print(f"  ⚠️ Photo file not found: {backup['photo_file']}")
@@ -342,6 +383,7 @@ async def run_userbot_commands(user_client, owner_id):
                 await status_msg.delete()
                 await event.respond(f"⚠️ *Fᴀɪʟᴇᴅ ᴛᴏ ʀᴇsᴛᴏʀᴇ ᴘʀᴏғɪʟᴇ:* {e}")
 
+        # ────═◈═─ COMMAND: .test ─═◈═────
         @user_client.on(events.NewMessage(outgoing=True, pattern=r"^\.test$"))
         async def test_command(event):
             print(f"  ✅ .test command received from user {my_id}")
@@ -352,6 +394,52 @@ async def run_userbot_commands(user_client, owner_id):
     except Exception as e:
         print(f"\n⚠️ Uꜱᴇʀʙᴏᴛ sᴇssɪᴏɴ ᴇɴᴅᴇᴅ ғᴏʀ ᴏᴡɴᴇʀ {owner_id}")
         print(f"📝 Eʀʀᴏʀ: {e}\n")
+
+# ────═◈═─ KEEP ALIVE & AUTO-RECONNECT ─═◈═────
+
+async def keep_alive():
+    """Sends a heartbeat every 5 minutes to keep the connection alive."""
+    while True:
+        try:
+            await bot.get_me()
+            print("💓 Keep-alive ping sent.")
+        except Exception as e:
+            print(f"⚠️ Keep-alive failed: {e}")
+        await asyncio.sleep(300)
+
+async def run_bot_with_unlimited_reconnect():
+    """Main loop that automatically reconnects if the bot disconnects."""
+    reconnect_count = 0
+    while True:
+        try:
+            reconnect_count += 1
+            if reconnect_count > 1:
+                print(f"\n🔄 RECONNECT ATTEMPT #{reconnect_count}")
+                print("⏳ Waiting 10 seconds before reconnecting...")
+                await asyncio.sleep(10)
+            
+            print("\n🚀 Starting Pikachu Bot...")
+            await bot.start(bot_token=BOT_TOKEN)
+            
+            # Load saved sessions
+            await auto_load_saved_sessions()
+            
+            # Start the keep-alive task in the background
+            asyncio.create_task(keep_alive())
+            
+            print("\n" + "═" * 50)
+            print("  ⚡ PIKACHU ENGINE ONLINE!")
+            print(f"  👑 Bʏ: {OWNER_NAME}")
+            print("  ♾️  Uɴʟɪᴍɪᴛᴇᴅ Aᴜᴛᴏ-Rᴇᴄᴏɴɴᴇᴄᴛ Aᴄᴛɪᴠᴇ")
+            print("  📌 Pᴇʀᴍᴀɴᴇɴᴛ ʀᴇsᴛᴏʀᴀᴛɪᴏɴ ᴀᴄᴛɪᴠᴇ")
+            print("═" * 50 + "\n")
+            
+            await bot.run_until_disconnected()
+            
+        except Exception as e:
+            print(f"❌ Bot disconnected: {e}")
+            print(f"🔄 Auto-reconnect in 10 seconds... (Attempt #{reconnect_count + 1})")
+            await asyncio.sleep(5)
 
 # ────═◈═─ SESSION RESTORATION ─═◈═────
 
@@ -393,44 +481,16 @@ async def auto_load_saved_sessions():
             except Exception as auto_err:
                 print(f"  ❌ Eʀʀᴏʀ ʟᴏᴀᴅɪɴɢ {filename}: {auto_err}")
 
-# ────═◈═─ UNLIMITED AUTO-RECONNECT (No Keep-Alive) ─═◈═────
-
-async def run_bot_forever():
-    """Starts the bot and automatically reconnects forever."""
-    reconnect_count = 0
-    while True:
-        try:
-            reconnect_count += 1
-            if reconnect_count > 1:
-                print(f"\n🔄 RECONNECT ATTEMPT #{reconnect_count}")
-                print("⏳ Waiting 10 seconds before reconnecting...")
-                await asyncio.sleep(10)
-            
-            print("\n🚀 Starting Pikachu Bot...")
-            await bot.start(bot_token=BOT_TOKEN)
-            
-            # Load saved sessions
-            await auto_load_saved_sessions()
-            
-            print("\n" + "═" * 50)
-            print("  ⚡ PIKACHU ENGINE ONLINE!")
-            print(f"  👑 Bʏ: {OWNER_NAME}")
-            print("  ♾️  Uɴʟɪᴍɪᴛᴇᴅ Aᴜᴛᴏ-Rᴇᴄᴏɴɴᴇᴄᴛ Aᴄᴛɪᴠᴇ")
-            print("  📌 Pᴇʀᴍᴀɴᴇɴᴛ ʀᴇsᴛᴏʀᴀᴛɪᴏɴ ᴀᴄᴛɪᴠᴇ")
-            print("═" * 50 + "\n")
-            
-            await bot.run_until_disconnected()
-            
-        except Exception as e:
-            print(f"❌ Bot disconnected: {e}")
-            print(f"🔄 Auto-reconnect in 10 seconds... (Attempt #{reconnect_count + 1})")
-
 # ────═◈═─ MAIN STARTUP ─═◈═────
 
 if __name__ == "__main__":
     print("  🚀 Sᴛᴀʀᴛɪɴɢ ᴛʜᴇ Bᴏᴛ Mᴀɴᴀɢᴇʀ...")
     print("  🤖 Cᴏɴɴᴇᴄᴛɪɴɢ ᴛᴏ Tᴇʟᴇɢʀᴀᴍ...")
-    print("  ♾️  Uɴʟɪᴍɪᴛᴇᴅ Rᴇᴄᴏɴɴᴇᴄᴛ Eɴᴀʙʟᴇᴅ (Nᴏ Kᴇᴇᴘ-Aʟɪᴠᴇ)")
+    print("  ♾️  Uɴʟɪᴍɪᴛᴇᴅ Rᴇᴄᴏɴɴᴇᴄᴛ Eɴᴀʙʟᴇᴅ!")
+    
+    # Start Flask web server in a separate thread for Render
+    print("  🌐 Starting web server for Render port binding...")
+    threading.Thread(target=run_web, daemon=True).start()
     
     # Run the bot with unlimited reconnect
-    asyncio.run(run_bot_forever())
+    asyncio.run(run_bot_with_unlimited_reconnect())
