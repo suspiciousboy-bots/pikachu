@@ -1,6 +1,8 @@
 import os
 import glob
 import asyncio
+import threading
+from flask import Flask
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.errors import SessionPasswordNeededError
@@ -22,6 +24,26 @@ SESSION_DIR = config.SESSION_DIR
 SESSION_STRING = config.SESSION_STRING
 # ──────────────────────────────────────────────────
 
+# ────═◈═─ FLASK WEB SERVER FOR RENDER ─═◈═────
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "⚡ Pikachu Bot is running!"
+
+@app.route('/health')
+def health():
+    return "OK", 200
+
+def run_web():
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port, debug=False)
+
+# Start Flask web server in a separate thread
+threading.Thread(target=run_web, daemon=True).start()
+print("🌐 Web server started for Render port binding")
+# ──────────────────────────────────────────────────
+
 # Create session directory if it doesn't exist
 if not os.path.exists(SESSION_DIR):
     os.makedirs(SESSION_DIR)
@@ -38,8 +60,8 @@ bot = TelegramClient(bot_session_path, API_ID, API_HASH, timeout=30)
 
 # ────═◈═─ PIKACHU BOT MANAGER ─═◈═────
 print("╔══════════════════════════════════════════════╗")
-print("║      ⚡ PIKACHU BOT MANAGER ⚡              ║")
-print(f"║          Bʏ: {OWNER_NAME}           ║")
+print("      ⚡ PIKACHU BOT MANAGER ⚡              ")
+print(f"          Bʏ: {OWNER_NAME}           ")
 print("╚══════════════════════════════════════════════╝")
 print("•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°")
 print("  🔌 Iɴɪᴛɪᴀʟɪᴢɪɴɢ ᴄᴏʀᴇ ᴇɴɢɪɴᴇ...")
