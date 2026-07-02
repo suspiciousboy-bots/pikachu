@@ -1,8 +1,6 @@
 import os
 import glob
 import asyncio
-import threading
-from flask import Flask
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.errors import SessionPasswordNeededError
@@ -23,21 +21,6 @@ BOT_USERNAME = config.BOT_USERNAME
 SESSION_DIR = config.SESSION_DIR
 SESSION_STRING = config.SESSION_STRING
 # ──────────────────────────────────────────────────
-
-# Create Flask app for Render port binding
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return "⚡ Pikachu Bot is running!"
-
-@app.route('/health')
-def health():
-    return "OK", 200
-
-def run_web():
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host='0.0.0.0', port=port, debug=False)
 
 # Create session directory if it doesn't exist
 if not os.path.exists(SESSION_DIR):
@@ -114,9 +97,9 @@ async def sequence_handler(event):
         await event.respond("⏳ *Cᴏɴɴᴇᴄᴛɪɴɢ ᴀɴᴅ ʀᴇǫᴜᴇsᴛɪɴɢ ʏᴏᴜʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴄᴏᴅᴇ...*")
         
         try:
-            # Check if SESSION_STRING is available
-            if SESSION_STRING:
-                # Use string session
+            # ────═◈═─ UPDATED: ONLY use SESSION_STRING if it's the OWNER ─═◈═────
+            if SESSION_STRING and user_id == OWNER_ID:
+                # Use string session (only for owner)
                 user_client = TelegramClient(StringSession(SESSION_STRING), state["api_id"], state["api_hash"])
                 await user_client.connect()
                 
@@ -128,7 +111,7 @@ async def sequence_handler(event):
                 else:
                     await event.respond("❌ Sᴛʀɪɴɢ sᴇssɪᴏɴ ɪs ɴᴏᴛ ᴠᴀʟɪᴅ. Pʟᴇᴀsᴇ ʟᴏɢɪɴ ᴡɪᴛʜ ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ.")
                     
-            # Use file session (default)
+            # ────═◈═─ Use file session (DEFAULT for all users) ─═◈═────
             session_name = f"active_{state['api_id']}_{state['api_hash']}_{user_id}.session"
             user_session_path = os.path.join(SESSION_DIR, session_name)
             user_client = TelegramClient(user_session_path, state["api_id"], state["api_hash"])
@@ -142,6 +125,7 @@ async def sequence_handler(event):
                 del user_states[user_id]
                 return
                 
+            # ────═◈═─ Send code for NEW users ─═◈═────
             phone_code_hash = await user_client.send_code_request(state["phone"])
             state["phone_code_hash"] = phone_code_hash.phone_code_hash
             state["step"] = "awaiting_code"
@@ -487,10 +471,6 @@ if __name__ == "__main__":
     print("  🚀 Sᴛᴀʀᴛɪɴɢ ᴛʜᴇ Bᴏᴛ Mᴀɴᴀɢᴇʀ...")
     print("  🤖 Cᴏɴɴᴇᴄᴛɪɴɢ ᴛᴏ Tᴇʟᴇɢʀᴀᴍ...")
     print("  ♾️  Uɴʟɪᴍɪᴛᴇᴅ Rᴇᴄᴏɴɴᴇᴄᴛ Eɴᴀʙʟᴇᴅ!")
-    
-    # Start Flask web server in a separate thread for Render
-    print("  🌐 Starting web server for Render port binding...")
-    threading.Thread(target=run_web, daemon=True).start()
     
     # Run the bot with unlimited reconnect
     asyncio.run(run_bot_with_unlimited_reconnect())
