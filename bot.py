@@ -24,29 +24,34 @@ SESSION_DIR = config.SESSION_DIR
 SESSION_STRING = config.SESSION_STRING
 # ──────────────────────────────────────────────────
 
-# ────═◈═─ FLASK WEB SERVER FOR RENDER ─═◈═────
+# ────═◈═─ FLASK WEB SERVER FOR RAILWAY/RENDER ─═◈═────
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "⚡ Pikachu Bot is running!"
+    return "⚡ Pikachu Bot is running on Railway!"
 
 @app.route('/health')
 def health():
     return "OK", 200
 
+@app.route('/ping')
+def ping():
+    return "Pong!", 200
+
 def run_web():
     port = int(os.environ.get("PORT", 10000))
-    app.run(host='0.0.0.0', port=port, debug=False)
+    app.run(host='0.0.0.0', port=port, debug=False, threaded=True)
 
 # Start Flask web server in a separate thread
 threading.Thread(target=run_web, daemon=True).start()
-print("🌐 Web server started for Render port binding")
+print("🌐 Web server started for Railway port binding")
 # ──────────────────────────────────────────────────
 
 # Create session directory if it doesn't exist
 if not os.path.exists(SESSION_DIR):
     os.makedirs(SESSION_DIR)
+    print(f"📁 Created session directory: {SESSION_DIR}")
 
 # Tracks active live login states inside the Bot DM
 user_states = {}
@@ -67,6 +72,7 @@ print("•°•°•°•°•°•°•°•°•°•°•°•°•°•°•
 print("  🔌 Iɴɪᴛɪᴀʟɪᴢɪɴɢ ᴄᴏʀᴇ ᴇɴɢɪɴᴇ...")
 print("  ⚡ Lᴏᴀᴅɪɴɢ ᴍᴜʟᴛɪ-ᴜsᴇʀ ᴍᴏᴅᴜʟᴇs...")
 print("  ♾️  Uɴʟɪᴍɪᴛᴇᴅ Aᴜᴛᴏ-Rᴇᴄᴏɴɴᴇᴄᴛ Eɴᴀʙʟᴇᴅ")
+print("  🚀 Dᴇᴘʟᴏʏᴇᴅ ᴏɴ Rᴀɪʟᴡᴀʏ")
 print("•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°\n")
 
 # ────═◈═─ BOT HANDLERS ─═◈═────
@@ -80,6 +86,7 @@ async def start_bot(event):
         "╔══════════════════════════════════════╗\n"
         "║     ⚡ PIKACHU MULTI-USER DEPLOYER ⚡  ║\n"
         f"║   Bʏ: {OWNER_NAME}            ║\n"
+        "║   🚀 Rᴀɪʟᴡᴀʏ Dᴇᴘʟᴏʏᴍᴇɴᴛ         ║\n"
         "╚══════════════════════════════════════╝\n\n"
         "✨ **Wᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ Pɪᴋᴀᴄʜᴜ Mᴜʟᴛɪ-Uꜱᴇʀ Dᴇᴘʟᴏʏᴇʀ!**\n\n"
         "📌 Oɴᴄᴇ ʟᴏɢɢᴇᴅ ɪɴ ʜᴇʀᴇ, ʏᴏᴜʀ sᴇssɪᴏɴ ɪs sᴀᴠᴇᴅ sᴀғᴇʟʏ.\n"
@@ -424,7 +431,7 @@ async def run_bot_with_unlimited_reconnect():
                 print("⏳ Waiting 10 seconds before reconnecting...")
                 await asyncio.sleep(10)
             
-            print("\n🚀 Starting Pikachu Bot...")
+            print("\n🚀 Starting Pikachu Bot on Railway...")
             await bot.start(bot_token=BOT_TOKEN)
             
             # Load saved sessions
@@ -438,6 +445,7 @@ async def run_bot_with_unlimited_reconnect():
             print(f"  👑 Bʏ: {OWNER_NAME}")
             print("  ♾️  Uɴʟɪᴍɪᴛᴇᴅ Aᴜᴛᴏ-Rᴇᴄᴏɴɴᴇᴄᴛ Aᴄᴛɪᴠᴇ")
             print("  📌 Pᴇʀᴍᴀɴᴇɴᴛ ʀᴇsᴛᴏʀᴀᴛɪᴏɴ ᴀᴄᴛɪᴠᴇ")
+            print("  🚀 Dᴇᴘʟᴏʏᴇᴅ ᴏɴ Rᴀɪʟᴡᴀʏ")
             print("═" * 50 + "\n")
             
             await bot.run_until_disconnected()
@@ -493,6 +501,8 @@ if __name__ == "__main__":
     print("  🚀 Sᴛᴀʀᴛɪɴɢ ᴛʜᴇ Bᴏᴛ Mᴀɴᴀɢᴇʀ...")
     print("  🤖 Cᴏɴɴᴇᴄᴛɪɴɢ ᴛᴏ Tᴇʟᴇɢʀᴀᴍ...")
     print("  ♾️  Uɴʟɪᴍɪᴛᴇᴅ Rᴇᴄᴏɴɴᴇᴄᴛ Eɴᴀʙʟᴇᴅ!")
+    print("  🚀 Dᴇᴘʟᴏʏᴇᴅ ᴏɴ Rᴀɪʟᴡᴀʏ")
+    print("  🌐 Wᴇʙ sᴇʀᴠᴇʀ ᴀᴄᴛɪᴠᴇ ᴏɴ ᴘᴏʀᴛ " + os.environ.get("PORT", "10000"))
     
     # Run the bot with unlimited reconnect
     asyncio.run(run_bot_with_unlimited_reconnect())
